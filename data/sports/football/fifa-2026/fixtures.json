@@ -82,9 +82,9 @@
     "away": "Turkiye",
     "venue": "BC Place",
     "city": "Vancouver",
-    "kickoff_local": "2026-06-12T21:00:00-07:00",
-    "kickoff_utc": "2026-06-13T04:00:00Z",
-    "kickoff_ist": "2026-06-13T09:30:00+05:30",
+    "kickoff_local": "2026-06-13T21:00:00-07:00",
+    "kickoff_utc": "2026-06-14T04:00:00Z",
+    "kickoff_ist": "2026-06-14T09:30:00+05:30",
     "tz_offset_hours": -7,
     "status": "scheduled",
     "score": null

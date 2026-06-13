@@ -36,7 +36,7 @@ FIXTURES = [
     (3,  "2026-06-12", "15:00", "Canada vs Bosnia and Herzegovina", "B", "BMO Field", "Toronto"),
     (4,  "2026-06-12", "18:00", "USA vs Paraguay", "D", "SoFi Stadium", "Los Angeles"),
     (5,  "2026-06-13", "21:00", "Haiti vs Scotland", "C", "Gillette Stadium", "Boston"),
-    (6,  "2026-06-12", "21:00", "Australia vs Turkiye", "D", "BC Place", "Vancouver"),
+    (6,  "2026-06-13", "21:00", "Australia vs Turkiye", "D", "BC Place", "Vancouver"),
     (7,  "2026-06-13", "18:00", "Brazil vs Morocco", "C", "MetLife Stadium", "New York/New Jersey"),
     (8,  "2026-06-13", "12:00", "Qatar vs Switzerland", "B", "Levi's Stadium", "San Francisco Bay Area"),
     (9,  "2026-06-14", "19:00", "Ivory Coast vs Ecuador", "E", "Lincoln Financial Field", "Philadelphia"),

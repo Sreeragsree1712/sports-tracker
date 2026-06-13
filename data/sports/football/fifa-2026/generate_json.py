@@ -77,9 +77,15 @@ def main():
         json.dump(fixtures, f, indent=2)
     with open(os.path.join(HERE, "groups.json"), "w") as f:
         json.dump(GROUPS, f, indent=2)
-    with open(os.path.join(HERE, "results.json"), "w") as f:
-        json.dump({}, f, indent=2)
-    print(f"Wrote {len(fixtures)} fixtures, {len(GROUPS)} groups, empty results.")
+    # results.json is populated by the GitHub Action scraper; only initialise
+    # it on first run, never overwrite real data.
+    results_path = os.path.join(HERE, "results.json")
+    if not os.path.exists(results_path):
+        with open(results_path, "w") as f:
+            json.dump({}, f, indent=2)
+        print(f"Wrote {len(fixtures)} fixtures, {len(GROUPS)} groups, empty results.")
+    else:
+        print(f"Wrote {len(fixtures)} fixtures, {len(GROUPS)} groups (results.json preserved).")
 
 
 if __name__ == "__main__":
