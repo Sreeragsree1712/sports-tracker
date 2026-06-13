@@ -89,9 +89,10 @@
     "status": "finished",
     "scorers": [
       {
-        "team": "Qatar",
-        "player": "Khoukhi",
-        "minute": "90+4"
+        "team": "Switzerland",
+        "player": "Miro Muheim",
+        "minute": "90+4",
+        "type": "og"
       },
       {
         "team": "Switzerland",
