@@ -6,6 +6,7 @@ import Groups from './routes/football/fifa2026/Groups';
 import Bracket from './routes/football/fifa2026/Bracket';
 import Teams from './routes/football/fifa2026/Teams';
 import Team from './routes/football/fifa2026/Team';
+import TopScorers from './routes/football/fifa2026/TopScorers';
 import TimezonePicker from './components/shared/TimezonePicker';
 import { useTimezone } from './lib/TimezoneContext';
 
@@ -20,6 +21,7 @@ export default function App() {
             <Route index element={<Fixtures />} />
             <Route path="groups" element={<Groups />} />
             <Route path="bracket" element={<Bracket />} />
+            <Route path="top-scorers" element={<TopScorers />} />
             <Route path="teams" element={<Teams />} />
             <Route path="team/:slug" element={<Team />} />
           </Route>

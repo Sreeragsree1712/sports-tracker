@@ -3,8 +3,9 @@ import type { Fixture, ResultsMap } from '../../lib/types';
 import TeamBadge from './TeamBadge';
 import DateChip from './DateChip';
 import LivePill from './LivePill';
+import MatchStatus from './MatchStatus';
 import { formatLocalWithOffset, relative } from '../../lib/time';
-import { isLive, liveMinute, useNow } from '../../lib/live';
+import { isLive, useNow } from '../../lib/live';
 import { teamSlug, canonicalTeam } from '../../data/fifa2026';
 
 interface Props {
@@ -106,11 +107,15 @@ export default function MatchCard({
           {finished && score ? (
             <div className="text-xl font-bold tabular-nums">
               {score.home} <span className="text-slate-500">–</span> {score.away}
-              {('pens' in score) && score.pens && (
+              {('pens' in score) && score.pens ? (
                 <div className="text-[10px] text-slate-400 font-normal mt-0.5">
                   pens {score.pens.home}–{score.pens.away}
                 </div>
-              )}
+              ) : ('aet' in score) && score.aet ? (
+                <div className="text-[10px] text-amber-400/80 font-normal mt-0.5 uppercase tracking-wider">
+                  AET
+                </div>
+              ) : null}
             </div>
           ) : liveScore ? (
             <div className="text-xl font-bold tabular-nums text-red-100">
@@ -139,15 +144,11 @@ export default function MatchCard({
 
       <div className="mt-3 flex items-center justify-between text-[11px] text-slate-400">
         <span>{f.venue} · {f.city}</span>
-        <span>
-          {finished ? (
-            <span className="text-pitch-500 font-medium">FT</span>
-          ) : live ? (
-            <span className="text-red-300 font-medium tabular-nums">{liveMinute(f, now) || 'kick-off'}</span>
-          ) : (
-            <>local {formatLocalWithOffset(f.kickoff_local, f.tz_offset_hours)} · {relative(f.kickoff_utc)}</>
-          )}
-        </span>
+        {finished || live ? (
+          <MatchStatus fixture={f} results={results} className="text-[11px]" />
+        ) : (
+          <span>local {formatLocalWithOffset(f.kickoff_local, f.tz_offset_hours)} · {relative(f.kickoff_utc, now)}</span>
+        )}
       </div>
     </div>
   );

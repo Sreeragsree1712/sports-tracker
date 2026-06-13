@@ -24,6 +24,8 @@ export interface MatchScore {
   ht?: HalfTimeScore;
   /** Penalty shootout score (knockout only) */
   pens?: { home: number; away: number };
+  /** True when match went to extra time (game-ending score after 90 minutes was tied) */
+  aet?: boolean;
 }
 
 export interface Fixture {
@@ -51,8 +53,22 @@ export type ResultsMap = Record<string, {
   away: number;
   ht?: HalfTimeScore;
   pens?: { home: number; away: number };
+  aet?: boolean;
   status: MatchStatus;
+  /** Goal scorers, populated by the scraper when available. */
+  scorers?: GoalEvent[];
 }>;
+
+export interface GoalEvent {
+  /** Canonical team name (e.g. "Brazil", matches groups.json). */
+  team: string;
+  /** Player name as scraped. */
+  player: string;
+  /** Match minute (1-120). May include "+" for stoppage time, kept as string. */
+  minute: string;
+  /** "pen" | "og" (own goal) | undefined (regular). */
+  type?: 'pen' | 'og';
+}
 
 export type GroupsMap = Record<GroupKey, string[]>;
 

@@ -22,11 +22,13 @@ These can silently break the live site. Validate well before kickoff.
 **Files:** `data/sports/football/fifa-2026/_source_fixtures.py`.
 
 ### P0.1 — Test the Wikipedia scraper against a real article  · S
-**Why:** `scripts/update-results.mjs` parses `.footballbox` elements with assumed class names (`.fhome`, `.faway`, `.fscore`, `.fdate`, `.fpenscore`). If the 2026 World Cup pages use a different template (e.g. `.football-box-foo`), the scraper will silently parse 0 boxes and the site will never update.
+**Why:** `scripts/update-results.mjs` parses `.footballbox` elements with assumed class names (`.fhome`, `.faway`, `.fscore`, `.fdate`, `.fpenscore`, **`.fhgoal` / `.fagoal`** for scorers). If the 2026 World Cup pages use a different template (e.g. `.football-box-foo`), the scraper will silently parse 0 boxes and the site will never update.
 
 **Acceptance:**
 - Pick one already-finished football match article on Wikipedia (e.g. `2022_FIFA_World_Cup_Final`).
-- Run a one-off variant of the script against it locally and confirm it extracts the score.
+- Run a one-off variant of the script against it locally and confirm it extracts: score, half-time, penalty shootout if any, AET flag, and at least one named goal scorer.
+- Verify `scorers[]` entries look like `{ team: "Argentina", player: "Messi", minute: "23", type?: "pen" }`.
+- Verify own goals end up credited to the *opposing* team (or are excluded from the leaderboard — see `src/lib/topScorers.ts`).
 - Add a fallback selector chain: try `.footballbox` → `.football-match` → any element matching `class*="football"` with the expected child fields.
 - Log a single `[warn] structure-changed: parsed 0 boxes from <url>` line if a page returns nothing, so the GH Actions log makes failure obvious.
 

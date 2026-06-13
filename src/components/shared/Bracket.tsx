@@ -91,11 +91,15 @@ export default function Bracket({ fixtures, results, resolved }: Props) {
           )}
         </div>
 
-        {finished && score?.pens && (
+        {finished && score?.pens ? (
           <div className="text-[9px] text-slate-500 mt-1 text-right">
             pens {score.pens.home}–{score.pens.away}
           </div>
-        )}
+        ) : finished && score && 'aet' in score && score.aet ? (
+          <div className="text-[9px] text-amber-400/70 mt-1 text-right uppercase tracking-wider">
+            after extra time
+          </div>
+        ) : null}
       </div>
     );
   };

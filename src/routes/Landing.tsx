@@ -101,6 +101,40 @@ export default function Landing() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-5xl px-4 pt-2 pb-10">
+        <h2 className="text-xl sm:text-2xl font-bold mb-2">What makes this different</h2>
+        <p className="text-sm text-slate-400 mb-6 max-w-2xl">
+          You can already Google "FIFA World Cup 2026" and get a fixture list. Here's the four things this
+          site does that the big scoreboards don't.
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Differentiator
+            emoji="\uD83C\uDF0D"
+            title="Times in your timezone, not the stadium's"
+            body="Auto-detects your IANA zone and converts every kickoff. One-click switch between 25 popular zones or search the full list — your choice is remembered across visits."
+          />
+          <Differentiator
+            emoji="\uD83C\uDF33"
+            title="Live bracket placeholder resolution"
+            body="Most schedules show '1A vs 3B/D/E/F' until the group stage ends. We resolve placeholders progressively as group results land — including the FIFA best-3rd-of-12 ranking. Even FIFA's own site doesn't do this in real time."
+          />
+          <Differentiator
+            emoji="\u26A1"
+            title="No app, no signup, no ads"
+            body="A static site that loads in under a second. No notification permission, no paywall, no regional restrictions. Just open the URL and read."
+          />
+          <Differentiator
+            emoji="\uD83D\uDD27"
+            title="100% open source & hackable"
+            body="MIT licensed. Fork it, add your sport, change the colours, run it for your fantasy league. The data layer is sport-agnostic by design."
+          />
+        </div>
+        <p className="text-xs text-slate-500 mt-5">
+          What we don't do: minute-by-minute live scores, lineups, in-match stats, or news. Those need a paid
+          data provider; we deliberately use the free Wikipedia firehose so the site stays free forever.
+        </p>
+      </section>
+
       <section className="mx-auto max-w-3xl px-4 pb-20">
         <h2 className="text-lg font-semibold mb-3">Pick your timezone</h2>
         <p className="text-sm text-slate-400 leading-relaxed">
@@ -119,6 +153,18 @@ export default function Landing() {
           GitHub Pages — so it stays fast and there's nothing to maintain.
         </p>
       </section>
+    </div>
+  );
+}
+
+function Differentiator({
+  emoji, title, body,
+}: { emoji: string; title: string; body: string }) {
+  return (
+    <div className="rounded-xl bg-slate-900/40 ring-1 ring-slate-800 p-4 hover:ring-slate-700 transition">
+      <div className="text-2xl mb-2" aria-hidden>{emoji}</div>
+      <h3 className="text-sm font-semibold text-slate-100">{title}</h3>
+      <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">{body}</p>
     </div>
   );
 }

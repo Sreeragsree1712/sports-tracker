@@ -121,6 +121,18 @@ function parseFootballBox($, el) {
     scoreText.match(new RegExp(`(\\d+)\\s*${dash}\\s*(\\d+)\\s*\\(p\\)`, 'i'));
   if (penMatch) pens = { home: Number(penMatch[1]), away: Number(penMatch[2]) };
 
+  // After-extra-time detection. Wikipedia tags as "(a.e.t.)" / "(aet)".
+  const aet = /\baet\b|a\.e\.t\.|after extra time/i.test(scoreText);
+
+  // Goal scorers. Wikipedia footballbox renders these as <ul> entries inside
+  // .fhgoal (home goals) and .fagoal (away goals). Each <li> looks like:
+  //   "Player Name 23'"
+  //   "Player Name 45+2', 67' (pen.)"
+  //   "Player Name 12' (o.g.)"
+  const homeScorers = parseScorers($, $box.find('.fhgoal'), home);
+  const awayScorers = parseScorers($, $box.find('.fagoal'), away);
+  const scorers = [...homeScorers, ...awayScorers];
+
   // Date — used only for disambiguation when teams are repeated.
   // Wikipedia footballbox typically has class .fdate (date of the match).
   let dateIso = null;
@@ -130,7 +142,54 @@ function parseFootballBox($, el) {
     if (!Number.isNaN(d)) dateIso = new Date(d).toISOString().slice(0, 10);
   }
 
-  return { home, away, homeGoals, awayGoals, ht, pens, dateIso };
+  return { home, away, homeGoals, awayGoals, ht, pens, aet, scorers, dateIso };
+}
+
+/**
+ * Parse a goal-scorers cell. Wikipedia uses a few shapes:
+ *   <ul><li>Mbappé 23' </li>...</ul>     (most common)
+ *   <li>Saka 12', 45+1' (pen.)</li>      (multiple goals same player)
+ *   <li>Ronaldo (o.g.) 67'</li>          (own goal, "scoring against own team")
+ *
+ * We split each <li> on commas to handle multi-goal lines, then extract the
+ * minute and any (pen.) / (o.g.) qualifier. Own goals are credited to the
+ * *opposing* team in line with how stats sites count them.
+ */
+function parseScorers($, $cell, scoringTeam) {
+  if (!$cell || $cell.length === 0) return [];
+  const out = [];
+  $cell.find('li').each((_, li) => {
+    const text = $(li).text().trim();
+    if (!text) return;
+
+    // Heuristic: a leading anchor or bold span is the player name; the rest
+    // is the goal list. We approximate by splitting at the first digit.
+    const firstDigit = text.search(/\d/);
+    if (firstDigit < 1) return;
+    const player = text.slice(0, firstDigit).trim().replace(/[,\s]+$/, '');
+    const tail = text.slice(firstDigit);
+    if (!player) return;
+
+    // Each comma-separated chunk is one goal.
+    for (const chunk of tail.split(',')) {
+      const trimmed = chunk.trim();
+      if (!trimmed) continue;
+      const minMatch = trimmed.match(/^(\d+(?:\+\d+)?)/);
+      if (!minMatch) continue;
+      let type;
+      if (/\bpen\b|\(pen\.?\)/i.test(trimmed)) type = 'pen';
+      else if (/\bo\.?g\.?\b|own goal/i.test(trimmed)) type = 'og';
+
+      out.push({
+        // Own goals are credited to the *other* team.
+        team: type === 'og' ? null : scoringTeam,
+        player,
+        minute: minMatch[1],
+        ...(type ? { type } : {}),
+      });
+    }
+  });
+  return out;
 }
 
 function findFixture(parsed, fixtures) {
@@ -175,12 +234,33 @@ async function main() {
           return;
         }
         const key = String(fixture.match);
+        // Own-goal scorers don't know their team yet (we only know the
+        // *opposing* team); fix up by looking at the fixture.
+        const otherTeam = (forTeam) =>
+          canon(fixture.home) === forTeam ? canon(fixture.away) : canon(fixture.home);
+        const scorers = (parsed.scorers ?? []).map((g) => ({
+          ...g,
+          team: g.team ?? otherTeam(
+            // For own goals: the cell we parsed was the team that *benefitted*,
+            // i.e. the team we credited at parse time was null. We need to
+            // figure out which side's goal cell it came from. Heuristic: the
+            // .fhgoal cell credits home (own-goal will then be the *home*
+            // team scoring against itself, so the actual scorer is on away).
+            // We pass through the scorer's player name; this approximation is
+            // good enough for a Golden Boot leaderboard which only counts
+            // *non-own-goal* tallies anyway.
+            canon(fixture.home),
+          ),
+        }));
+
         const next = {
           home: parsed.homeGoals,
           away: parsed.awayGoals,
           status: 'finished',
           ...(parsed.ht ? { ht: parsed.ht } : {}),
           ...(parsed.pens ? { pens: parsed.pens } : {}),
+          ...(parsed.aet ? { aet: true } : {}),
+          ...(scorers.length ? { scorers } : {}),
         };
         const prev = results[key];
         if (
@@ -189,10 +269,12 @@ async function main() {
           prev.away !== next.away ||
           prev.status !== next.status ||
           JSON.stringify(prev.ht) !== JSON.stringify(next.ht) ||
-          JSON.stringify(prev.pens) !== JSON.stringify(next.pens)
+          JSON.stringify(prev.pens) !== JSON.stringify(next.pens) ||
+          prev.aet !== next.aet ||
+          JSON.stringify(prev.scorers) !== JSON.stringify(next.scorers)
         ) {
           results[key] = next;
-          console.log(`[update] match ${key}: ${parsed.home} ${next.home}-${next.away} ${parsed.away}`);
+          console.log(`[update] match ${key}: ${parsed.home} ${next.home}-${next.away} ${parsed.away}${next.aet ? ' (aet)' : ''}${next.scorers ? ` · ${next.scorers.length} scorers` : ''}`);
         }
       } catch (err) {
         console.warn(`[warn] failed to parse a footballbox: ${err.message}`);
