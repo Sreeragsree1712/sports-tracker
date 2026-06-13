@@ -2,9 +2,11 @@ import { useMemo, useState } from 'react';
 import { fixtures, results, groups, canonicalTeam } from '../../../data/fifa2026';
 import ScheduleTable from '../../../components/shared/ScheduleTable';
 import MatchCard from '../../../components/shared/MatchCard';
+import LivePill from '../../../components/shared/LivePill';
 import { computeAllStandings } from '../../../lib/standings';
 import { resolveBracket } from '../../../lib/bracket';
 import { todayKey, dateKey, relative } from '../../../lib/time';
+import { isLive, useNow } from '../../../lib/live';
 import { useTimezone } from '../../../lib/TimezoneContext';
 import type { Fixture, GroupKey } from '../../../lib/types';
 
@@ -19,6 +21,7 @@ export default function Fixtures() {
   const [groupFilter, setGroupFilter] = useState<GroupKey | 'all'>('all');
   const [teamFilter, setTeamFilter] = useState<string>('all');
   const { tz, abbr } = useTimezone();
+  const now = useNow();
 
   const standings = useMemo(
     () => computeAllStandings(groups, fixtures, results),
@@ -35,18 +38,32 @@ export default function Fixtures() {
     return Array.from(set).sort();
   }, []);
 
+  const liveMatches = useMemo(
+    () =>
+      fixtures
+        .filter((f) => isLive(f, results, now))
+        .sort((a, b) => a.kickoff_utc.localeCompare(b.kickoff_utc)),
+    [now],
+  );
+  const liveMatchIds = useMemo(() => new Set(liveMatches.map((f) => f.match)), [liveMatches]);
+
   const filtered = useMemo(() => {
     const today = todayKey(tz);
-    const nowIso = new Date().toISOString();
-    return fixtures.filter((f) => {
+    const nowIso = now.toISOString();
+    const list = fixtures.filter((f) => {
       if (stage === 'group' && f.stage !== 'group') return false;
       if (stage === 'knockout' && f.stage === 'group') return false;
+
+      const matchIsLive = liveMatchIds.has(f.match);
 
       if (dateFilter !== 'all') {
         const k = dateKey(f.kickoff_ist, tz);
         if (dateFilter === 'today' && k !== today) return false;
-        if (dateFilter === 'upcoming' && f.kickoff_utc < nowIso && f.status !== 'live') return false;
+        // Live matches are always included in the "Upcoming" view so users
+        // landing on the page during a kickoff window see what's on right now.
+        if (dateFilter === 'upcoming' && f.kickoff_utc < nowIso && !matchIsLive) return false;
         if (dateFilter === 'past' && f.kickoff_utc >= nowIso) return false;
+        if (dateFilter === 'past' && matchIsLive) return false;
       }
 
       if (groupFilter !== 'all' && f.group !== groupFilter) return false;
@@ -59,24 +76,57 @@ export default function Fixtures() {
       }
       return true;
     });
-  }, [stage, dateFilter, groupFilter, teamFilter, resolved, tz]);
+
+    // Sort: live first (by kickoff asc), then everything else by kickoff asc.
+    return list.sort((a, b) => {
+      const aLive = liveMatchIds.has(a.match) ? 0 : 1;
+      const bLive = liveMatchIds.has(b.match) ? 0 : 1;
+      if (aLive !== bLive) return aLive - bLive;
+      return a.kickoff_utc.localeCompare(b.kickoff_utc);
+    });
+  }, [stage, dateFilter, groupFilter, teamFilter, resolved, tz, now, liveMatchIds]);
 
   const nextMatch = useMemo<Fixture | null>(() => {
-    const nowIso = new Date().toISOString();
+    const nowIso = now.toISOString();
     return (
       fixtures
         .filter((f) => f.kickoff_utc >= nowIso)
         .sort((a, b) => a.kickoff_utc.localeCompare(b.kickoff_utc))[0] ?? null
     );
-  }, []);
+  }, [now]);
+
+  const hasLive = liveMatches.length > 0;
 
   return (
     <div className="space-y-6">
-      {nextMatch && (
+      {hasLive && (
+        <section>
+          <div className="flex items-center gap-2 mb-2">
+            <h2 className="text-sm uppercase tracking-wider text-red-300">
+              {liveMatches.length === 1 ? 'Live now' : `Live now · ${liveMatches.length} matches`}
+            </h2>
+            <LivePill fixture={liveMatches[0]} size="sm" />
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {liveMatches.map((f) => (
+              <MatchCard
+                key={f.match}
+                fixture={f}
+                results={results}
+                basePath={BASE}
+                homeTeamOverride={resolved.get(f.match)?.homeTeam ?? null}
+                awayTeamOverride={resolved.get(f.match)?.awayTeam ?? null}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!hasLive && nextMatch && (
         <section>
           <div className="flex items-baseline justify-between mb-2">
             <h2 className="text-sm uppercase tracking-wider text-slate-400">Next match</h2>
-            <span className="text-xs text-pitch-400">{relative(nextMatch.kickoff_utc)}</span>
+            <span className="text-xs text-pitch-400">{relative(nextMatch.kickoff_utc, now)}</span>
           </div>
           <MatchCard
             fixture={nextMatch}
@@ -95,7 +145,7 @@ export default function Fixtures() {
             value={dateFilter}
             onChange={(v) => setDateFilter(v as DateFilter)}
             options={[
-              { v: 'upcoming', l: 'Upcoming' },
+              { v: 'upcoming', l: hasLive ? `Upcoming + Live` : 'Upcoming' },
               { v: 'today', l: `Today (${abbr})` },
               { v: 'past', l: 'Past' },
               { v: 'all', l: 'All' },

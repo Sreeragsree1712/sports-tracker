@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import type { Fixture, ResultsMap } from '../../lib/types';
 import TeamBadge from './TeamBadge';
 import DateChip from './DateChip';
+import LivePill from './LivePill';
 import { formatLocalWithOffset, relative } from '../../lib/time';
+import { isLive, liveMinute, useNow } from '../../lib/live';
 import { teamSlug, canonicalTeam } from '../../data/fifa2026';
 
 interface Props {
@@ -41,9 +43,16 @@ export default function MatchCard({
   homeTeamOverride,
   awayTeamOverride,
 }: Props) {
+  const now = useNow();
   const r = results[String(f.match)];
   const finished = r?.status === 'finished' || (f.score && f.status === 'finished');
   const score = r?.status === 'finished' ? r : (f.score && f.status === 'finished' ? f.score : null);
+  const live = !finished && isLive(f, results, now);
+  // If the scraper has already populated a non-finished score for this match,
+  // surface it as the live scoreline. (The current scraper sets status only
+  // to 'finished' so this stays null in practice — kept for future-proofing
+  // if we add a 'live' status path.)
+  const liveScore = live && r && r.status === 'live' ? r : null;
 
   const homeName = homeTeamOverride ?? f.home;
   const awayName = awayTeamOverride ?? f.away;
@@ -62,10 +71,15 @@ export default function MatchCard({
       ? `Group ${f.group}`
       : STAGE_LABEL[f.stage];
 
+  const cardClasses = live
+    ? 'rounded-xl bg-red-950/30 ring-1 ring-red-500/60 shadow-[0_0_0_1px_rgba(248,113,113,0.15),0_8px_24px_-12px_rgba(248,113,113,0.4)] p-4 transition'
+    : 'rounded-xl bg-slate-900/60 ring-1 ring-slate-800 p-4 hover:ring-pitch-600/50 transition';
+
   return (
-    <div className="rounded-xl bg-slate-900/60 ring-1 ring-slate-800 p-4 hover:ring-pitch-600/50 transition">
+    <div className={cardClasses}>
       <div className="flex items-start justify-between gap-3 mb-3">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          {live && <LivePill fixture={f} size="sm" />}
           <span className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${STAGE_BADGE[f.stage]}`}>
             {stageLabel}
           </span>
@@ -98,6 +112,12 @@ export default function MatchCard({
                 </div>
               )}
             </div>
+          ) : liveScore ? (
+            <div className="text-xl font-bold tabular-nums text-red-100">
+              {liveScore.home} <span className="text-red-400/70">–</span> {liveScore.away}
+            </div>
+          ) : live ? (
+            <div className="text-sm text-red-300/90 font-semibold">live</div>
           ) : (
             <div className="text-sm text-slate-400">vs</div>
           )}
@@ -120,9 +140,13 @@ export default function MatchCard({
       <div className="mt-3 flex items-center justify-between text-[11px] text-slate-400">
         <span>{f.venue} · {f.city}</span>
         <span>
-          {finished
-            ? <span className="text-pitch-500 font-medium">FT</span>
-            : <>local {formatLocalWithOffset(f.kickoff_local, f.tz_offset_hours)} · {relative(f.kickoff_utc)}</>}
+          {finished ? (
+            <span className="text-pitch-500 font-medium">FT</span>
+          ) : live ? (
+            <span className="text-red-300 font-medium tabular-nums">{liveMinute(f, now) || 'kick-off'}</span>
+          ) : (
+            <>local {formatLocalWithOffset(f.kickoff_local, f.tz_offset_hours)} · {relative(f.kickoff_utc)}</>
+          )}
         </span>
       </div>
     </div>

@@ -85,15 +85,10 @@ These can silently break the live site. Validate well before kickoff.
 
 **Files:** `public/og-image.png`, `index.html`.
 
-### P1.3 — Live (in-progress) match indicator  · M
-**Why:** Currently we only render `scheduled` and `finished`. During the tournament a 30-minute lag means visitors will see "in 2h" turn into "starting now" and then nothing until FT. A simple "LIVE" pill (without minute-by-minute scores) is high impact.
+### P1.3 — Live (in-progress) match indicator  · M ✅ Done
+**Implemented in `feat/live-indicator`.** Pure time-based detection (`kickoff_utc <= now < kickoff_utc + 145m` AND no `finished` result). New `<LivePill>` with pulsing dot + minute clock, used on every `MatchCard`. Fixtures page now has a dedicated "Live now" hero section (replaces the "Next match" hero while live matches exist), and live matches sort to the top of the "Upcoming" filter. A 30s `useNow()` tick keeps everything fresh without page reload.
 
-**Acceptance:**
-- In `MatchCard`, if `kickoff_utc < now < kickoff_utc + 110 minutes` and no FT result yet, show a red pulsing "LIVE" pill instead of the relative countdown.
-- Fixtures "Next match" hero falls through to the next un-finished one if the current "next" is now live.
-- No score display — just the indicator.
-
-**Files:** `src/components/shared/MatchCard.tsx`, `src/routes/football/fifa2026/Fixtures.tsx`.
+**Files:** `src/lib/live.ts`, `src/components/shared/LivePill.tsx`, `src/components/shared/MatchCard.tsx`, `src/routes/football/fifa2026/Fixtures.tsx`.
 
 ### P1.4 — Per-team page: show next opponent + qualification status  · S
 **Why:** `/team/:slug` lists fixtures but doesn't surface the most useful info ("who do they play next? are they through?").
