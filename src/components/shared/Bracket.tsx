@@ -1,7 +1,8 @@
 import type { Fixture, ResultsMap } from '../../lib/types';
 import type { ResolvedKoMatch } from '../../lib/bracket';
 import TeamBadge from './TeamBadge';
-import { formatISTDate, formatISTTime } from '../../lib/time';
+import { formatDate, formatTime } from '../../lib/time';
+import { useTimezone } from '../../lib/TimezoneContext';
 
 interface Props {
   fixtures: Fixture[];
@@ -29,6 +30,7 @@ const PATHWAY_2 = {
 };
 
 export default function Bracket({ fixtures, results, resolved }: Props) {
+  const { tz } = useTimezone();
   const fixtureByMatch = new Map(fixtures.map((f) => [f.match, f]));
 
   const renderCell = (m: number) => {
@@ -60,7 +62,7 @@ export default function Bracket({ fixtures, results, resolved }: Props) {
       >
         <div className="flex items-center justify-between text-[9px] uppercase tracking-wider text-slate-500 mb-1.5">
           <span>#{m}</span>
-          <span>{formatISTDate(f.kickoff_ist)} · {formatISTTime(f.kickoff_ist)}</span>
+          <span>{formatDate(f.kickoff_ist, tz)} · {formatTime(f.kickoff_ist, tz)}</span>
         </div>
 
         <div className={`flex items-center justify-between py-1 ${winner === 'home' ? 'text-pitch-400 font-semibold' : winner === 'away' ? 'text-slate-500' : ''}`}>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTimezone } from '../lib/TimezoneContext';
 
 interface SportTile {
   id: string;
@@ -14,7 +15,7 @@ const SPORTS: SportTile[] = [
   {
     id: 'fifa-2026',
     name: 'FIFA World Cup 2026',
-    blurb: 'United 2026 — USA, Canada & Mexico. 48 teams, 104 matches, all in IST.',
+    blurb: 'United 2026 — USA, Canada & Mexico. 48 teams, 104 matches.',
     emoji: '\u26BD\uFE0F',
     href: '/football/fifa-2026',
     status: 'live',
@@ -27,6 +28,7 @@ const SPORTS: SportTile[] = [
 ];
 
 export default function Landing() {
+  const { abbr, label } = useTimezone();
   return (
     <div>
       <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-pitch-900/60 border-b border-slate-800">
@@ -38,12 +40,14 @@ export default function Landing() {
             Multi-sport scores
             <br />
             <span className="bg-gradient-to-r from-pitch-400 to-pitch-600 bg-clip-text text-transparent">
-              in Indian Standard Time
+              in your timezone
             </span>
           </h1>
           <p className="mt-5 text-slate-400 max-w-xl mx-auto">
-            Fixtures, live standings, and brackets — all converted to IST so you never have to do timezone math again.
-            Launching with the <strong className="text-slate-200">FIFA World Cup 2026</strong>.
+            Fixtures, live standings, and brackets — automatically converted to{' '}
+            <strong className="text-slate-200" title={label}>{abbr}</strong>{' '}
+            so you never have to do timezone math again. Launching with the{' '}
+            <strong className="text-slate-200">FIFA World Cup 2026</strong>.
           </p>
           <div className="mt-7 flex justify-center gap-3 flex-wrap">
             <Link
@@ -98,12 +102,15 @@ export default function Landing() {
       </section>
 
       <section className="mx-auto max-w-3xl px-4 pb-20">
-        <h2 className="text-lg font-semibold mb-3">Why IST-first?</h2>
+        <h2 className="text-lg font-semibold mb-3">Pick your timezone</h2>
         <p className="text-sm text-slate-400 leading-relaxed">
-          Most international scoreboards default to UTC or local stadium time, leaving Indian fans
-          to do mental arithmetic. Sports Tracker bakes the +5:30 conversion into every fixture,
-          standing, and bracket. The host city's local kickoff is shown as secondary info — never
-          as the headline time.
+          Most international scoreboards default to UTC or local stadium time, leaving
+          fans abroad to do mental arithmetic. Sports Tracker auto-detects your
+          timezone (currently <strong className="text-slate-200" title={label}>{abbr}</strong>)
+          and bakes the conversion into every fixture, standing, and bracket. Use the
+          globe button in the top bar to switch — your choice is remembered on this
+          device. The host city's local kickoff is shown as secondary info, never as
+          the headline time.
         </p>
         <h2 className="text-lg font-semibold mt-6 mb-3">How it stays up to date</h2>
         <p className="text-sm text-slate-400 leading-relaxed">

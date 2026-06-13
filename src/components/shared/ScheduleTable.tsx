@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import type { Fixture, ResultsMap } from '../../lib/types';
 import MatchCard from './MatchCard';
-import { istDateKey, formatISTDateLong } from '../../lib/time';
+import { dateKey, formatDateLong } from '../../lib/time';
+import { useTimezone } from '../../lib/TimezoneContext';
 
 interface Props {
   fixtures: Fixture[];
@@ -20,21 +21,22 @@ export default function ScheduleTable({
   resolved,
   emptyMessage = 'No matches.',
 }: Props) {
+  const { tz } = useTimezone();
   const grouped = useMemo(() => {
     if (groupBy !== 'date') return [{ key: 'all', label: '', items: fixtures }];
     const map = new Map<string, Fixture[]>();
     for (const f of fixtures) {
-      const key = istDateKey(f.kickoff_ist);
+      const key = dateKey(f.kickoff_ist, tz);
       if (!map.has(key)) map.set(key, []);
       map.get(key)!.push(f);
     }
     const keys = Array.from(map.keys()).sort();
     return keys.map((k) => ({
       key: k,
-      label: formatISTDateLong(map.get(k)![0].kickoff_ist),
+      label: formatDateLong(map.get(k)![0].kickoff_ist, tz),
       items: map.get(k)!.sort((a, b) => a.kickoff_utc.localeCompare(b.kickoff_utc)),
     }));
-  }, [fixtures, groupBy]);
+  }, [fixtures, groupBy, tz]);
 
   if (fixtures.length === 0) {
     return (

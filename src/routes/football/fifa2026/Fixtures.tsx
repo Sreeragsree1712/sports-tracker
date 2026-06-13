@@ -4,7 +4,8 @@ import ScheduleTable from '../../../components/shared/ScheduleTable';
 import MatchCard from '../../../components/shared/MatchCard';
 import { computeAllStandings } from '../../../lib/standings';
 import { resolveBracket } from '../../../lib/bracket';
-import { todayISTKey, istDateKey, relative } from '../../../lib/time';
+import { todayKey, dateKey, relative } from '../../../lib/time';
+import { useTimezone } from '../../../lib/TimezoneContext';
 import type { Fixture, GroupKey } from '../../../lib/types';
 
 const BASE = '/football/fifa-2026';
@@ -17,6 +18,7 @@ export default function Fixtures() {
   const [dateFilter, setDateFilter] = useState<DateFilter>('upcoming');
   const [groupFilter, setGroupFilter] = useState<GroupKey | 'all'>('all');
   const [teamFilter, setTeamFilter] = useState<string>('all');
+  const { tz, abbr } = useTimezone();
 
   const standings = useMemo(
     () => computeAllStandings(groups, fixtures, results),
@@ -34,14 +36,14 @@ export default function Fixtures() {
   }, []);
 
   const filtered = useMemo(() => {
-    const today = todayISTKey();
+    const today = todayKey(tz);
     const nowIso = new Date().toISOString();
     return fixtures.filter((f) => {
       if (stage === 'group' && f.stage !== 'group') return false;
       if (stage === 'knockout' && f.stage === 'group') return false;
 
       if (dateFilter !== 'all') {
-        const k = istDateKey(f.kickoff_ist);
+        const k = dateKey(f.kickoff_ist, tz);
         if (dateFilter === 'today' && k !== today) return false;
         if (dateFilter === 'upcoming' && f.kickoff_utc < nowIso && f.status !== 'live') return false;
         if (dateFilter === 'past' && f.kickoff_utc >= nowIso) return false;
@@ -57,7 +59,7 @@ export default function Fixtures() {
       }
       return true;
     });
-  }, [stage, dateFilter, groupFilter, teamFilter, resolved]);
+  }, [stage, dateFilter, groupFilter, teamFilter, resolved, tz]);
 
   const nextMatch = useMemo<Fixture | null>(() => {
     const nowIso = new Date().toISOString();
@@ -94,7 +96,7 @@ export default function Fixtures() {
             onChange={(v) => setDateFilter(v as DateFilter)}
             options={[
               { v: 'upcoming', l: 'Upcoming' },
-              { v: 'today', l: 'Today (IST)' },
+              { v: 'today', l: `Today (${abbr})` },
               { v: 'past', l: 'Past' },
               { v: 'all', l: 'All' },
             ]}

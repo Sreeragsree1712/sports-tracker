@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { useTimezone } from '../../../lib/TimezoneContext';
 
 const tabs = [
   { to: '', label: 'Fixtures', end: true },
@@ -8,6 +9,7 @@ const tabs = [
 ];
 
 export default function FifaLayout() {
+  const { abbr, label } = useTimezone();
   return (
     <div>
       <header className="bg-gradient-to-br from-pitch-900 via-slate-900 to-slate-950 border-b border-slate-800">
@@ -24,9 +26,12 @@ export default function FifaLayout() {
                 104 matches · 48 teams · 12 groups · 16 host cities
               </p>
             </div>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-pitch-900/60 ring-1 ring-pitch-700 px-3 py-1 text-xs">
+            <span
+              className="inline-flex items-center gap-1.5 rounded-full bg-pitch-900/60 ring-1 ring-pitch-700 px-3 py-1 text-xs"
+              title={`Times shown in ${label}`}
+            >
               <span className="w-1.5 h-1.5 rounded-full bg-pitch-400" />
-              All times in IST (UTC+5:30)
+              All times in {abbr}
             </span>
           </div>
         </div>

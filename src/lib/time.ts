@@ -1,58 +1,51 @@
 /**
  * Time formatting helpers.
  *
- * All `iso` inputs are valid ISO 8601 strings (with offset). We rely on
- * `Intl.DateTimeFormat` with `timeZone` to render IST without depending on
- * the user's machine clock zone.
+ * All `iso` inputs are valid ISO 8601 strings (with offset). All formatters
+ * take an IANA `tz` string (e.g. "Asia/Kolkata", "America/New_York") so the
+ * caller chooses what to render.
  */
 
-const IST_TZ = 'Asia/Kolkata';
-
-const istDate = new Intl.DateTimeFormat('en-IN', {
-  timeZone: IST_TZ,
-  weekday: 'short',
-  day: '2-digit',
-  month: 'short',
-});
-
-const istTime = new Intl.DateTimeFormat('en-IN', {
-  timeZone: IST_TZ,
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: true,
-});
-
-const istDateLong = new Intl.DateTimeFormat('en-IN', {
-  timeZone: IST_TZ,
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
-
-export function formatISTDate(iso: string): string {
-  return istDate.format(new Date(iso));
+function makeFmt(tz: string, opts: Intl.DateTimeFormatOptions): Intl.DateTimeFormat {
+  return new Intl.DateTimeFormat('en-IN', { timeZone: tz, ...opts });
 }
 
-export function formatISTTime(iso: string): string {
-  return istTime.format(new Date(iso));
+export function formatDate(iso: string, tz: string): string {
+  return makeFmt(tz, {
+    weekday: 'short',
+    day: '2-digit',
+    month: 'short',
+  }).format(new Date(iso));
 }
 
-export function formatISTDateLong(iso: string): string {
-  return istDateLong.format(new Date(iso));
+export function formatTime(iso: string, tz: string): string {
+  return makeFmt(tz, {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  }).format(new Date(iso));
 }
 
-/** YYYY-MM-DD in IST — useful as a stable bucket key. */
-export function istDateKey(iso: string): string {
+export function formatDateLong(iso: string, tz: string): string {
+  return makeFmt(tz, {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(iso));
+}
+
+/** YYYY-MM-DD in `tz` — useful as a stable bucket key. */
+export function dateKey(iso: string, tz: string): string {
   const fmt = new Intl.DateTimeFormat('en-CA', {
-    timeZone: IST_TZ,
+    timeZone: tz,
     year: 'numeric', month: '2-digit', day: '2-digit',
   });
   return fmt.format(new Date(iso));
 }
 
-export function todayISTKey(): string {
-  return istDateKey(new Date().toISOString());
+export function todayKey(tz: string): string {
+  return dateKey(new Date().toISOString(), tz);
 }
 
 /**
@@ -78,7 +71,7 @@ export function formatLocalWithOffset(iso: string, offsetHours: number): string 
 }
 
 /**
- * Human relative string for a kickoff time.
+ * Human relative string for a kickoff time. Timezone-agnostic.
  */
 export function relative(iso: string, now: Date = new Date()): string {
   const target = new Date(iso).getTime();

@@ -6,6 +6,8 @@ import Groups from './routes/football/fifa2026/Groups';
 import Bracket from './routes/football/fifa2026/Bracket';
 import Teams from './routes/football/fifa2026/Teams';
 import Team from './routes/football/fifa2026/Team';
+import TimezonePicker from './components/shared/TimezonePicker';
+import { useTimezone } from './lib/TimezoneContext';
 
 export default function App() {
   return (
@@ -39,13 +41,14 @@ function NavBar() {
           </span>
           <span>Sports Tracker</span>
         </Link>
-        <div className="flex items-center gap-1 text-sm">
+        <div className="flex items-center gap-1 sm:gap-2 text-sm">
           <Link
             to="/football/fifa-2026"
             className="px-3 py-1.5 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition"
           >
             FIFA 2026
           </Link>
+          <TimezonePicker variant="compact" />
           <a
             href="https://github.com"
             target="_blank"
@@ -61,11 +64,12 @@ function NavBar() {
 }
 
 function Footer() {
+  const { abbr, label } = useTimezone();
   return (
     <footer className="border-t border-slate-800 mt-12">
       <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-slate-500 flex items-center justify-between flex-wrap gap-2">
         <span>Sports Tracker · Static site, free forever.</span>
-        <span>Times in IST (UTC+5:30) · Data via Wikipedia</span>
+        <span title={label}>Times in {abbr} · Data via Wikipedia</span>
       </div>
     </footer>
   );
