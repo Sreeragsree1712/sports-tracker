@@ -35,11 +35,13 @@ const RESULTS_PATH = path.join(ROOT, 'data/sports/football/fifa-2026/results.jso
 
 const SOURCE_PAGES = [
   'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup',
-  'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_group_stage',
-  'https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage',
+  // The /group_stage and /knockout_stage subpages don't exist as of writing.
+  // The main page already embeds every footballbox, so it's sufficient.
 ];
 
 const TEAM_ALIASES = {
+  // Wikipedia uses these short forms — map them onto our canonical names
+  // (the names used in groups.json).
   'South Korea': 'Korea Republic',
   'Korea Republic': 'Korea Republic',
   'United States': 'United States',
@@ -50,12 +52,17 @@ const TEAM_ALIASES = {
   'Turkiye': 'Turkiye',
   'Cape Verde': 'Cabo Verde',
   'Cabo Verde': 'Cabo Verde',
+  'Czech Republic': 'Czechia',
+  'Czechia': 'Czechia',
   'Côte d’Ivoire': "Cote d'Ivoire",
   "Côte d'Ivoire": "Cote d'Ivoire",
   'Ivory Coast': "Cote d'Ivoire",
+  "Cote d'Ivoire": "Cote d'Ivoire",
   'Curaçao': 'Curacao',
+  'Curacao': 'Curacao',
   'DR Congo': 'Congo DR',
   'Democratic Republic of the Congo': 'Congo DR',
+  'Congo DR': 'Congo DR',
 };
 
 function canon(name) {
@@ -67,7 +74,7 @@ function canon(name) {
 async function fetchHtml(url) {
   const res = await fetch(url, {
     headers: {
-      'User-Agent': 'sports-tracker-scraper/1.0 (https://github.com/) — friendly bot',
+      'User-Agent': 'sports-tracker-scraper/1.0 (https://github.com/) friendly bot',
       'Accept': 'text/html',
     },
   });
@@ -204,5 +211,7 @@ async function main() {
 
 main().catch((err) => {
   console.error('[error] scraper crashed:', err);
-  process.exit(0);
+  // Exit non-zero so the GitHub Action turns red and we notice. The previous
+  // exit(0) hid a header-encoding bug for hours.
+  process.exit(1);
 });

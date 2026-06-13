@@ -1,1 +1,22 @@
-{}
+{
+  "1": {
+    "home": 2,
+    "away": 0,
+    "status": "finished"
+  },
+  "2": {
+    "home": 2,
+    "away": 1,
+    "status": "finished"
+  },
+  "3": {
+    "home": 1,
+    "away": 1,
+    "status": "finished"
+  },
+  "4": {
+    "home": 4,
+    "away": 1,
+    "status": "finished"
+  }
+}
