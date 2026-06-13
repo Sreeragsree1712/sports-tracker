@@ -84,7 +84,6 @@ export default function MatchCard({
           <span className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${STAGE_BADGE[f.stage]}`}>
             {stageLabel}
           </span>
-          <span className="text-[10px] text-slate-500">#{f.match}</span>
         </div>
         <DateChip iso={f.kickoff_ist} />
       </div>

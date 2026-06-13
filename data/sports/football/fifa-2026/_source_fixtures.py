@@ -31,7 +31,7 @@ TZ = {
 
 # (match, date, local_HHMM, matchup, group, venue, city)
 FIXTURES = [
-    (1,  "2026-06-11", "15:00", "Mexico vs South Africa", "A", "Estadio Azteca", "Mexico City"),
+    (1,  "2026-06-11", "13:00", "Mexico vs South Africa", "A", "Estadio Azteca", "Mexico City"),
     (2,  "2026-06-11", "20:00", "South Korea vs Czechia", "A", "Estadio Akron", "Guadalajara"),
     (3,  "2026-06-12", "15:00", "Canada vs Bosnia and Herzegovina", "B", "BMO Field", "Toronto"),
     (4,  "2026-06-12", "18:00", "USA vs Paraguay", "D", "SoFi Stadium", "Los Angeles"),
@@ -59,7 +59,7 @@ FIXTURES = [
     (26, "2026-06-18", "12:00", "Switzerland vs Bosnia and Herzegovina", "B", "SoFi Stadium", "Los Angeles"),
     (27, "2026-06-18", "15:00", "Canada vs Qatar", "B", "BC Place", "Vancouver"),
     (28, "2026-06-18", "19:00", "Mexico vs South Korea", "A", "Estadio Akron", "Guadalajara"),
-    (29, "2026-06-19", "21:00", "Brazil vs Haiti", "C", "Lincoln Financial Field", "Philadelphia"),
+    (29, "2026-06-19", "20:30", "Brazil vs Haiti", "C", "Lincoln Financial Field", "Philadelphia"),
     (30, "2026-06-19", "18:00", "Scotland vs Morocco", "C", "Gillette Stadium", "Boston"),
     (31, "2026-06-19", "20:00", "Turkiye vs Paraguay", "D", "Levi's Stadium", "San Francisco Bay Area"),
     (32, "2026-06-19", "12:00", "USA vs Australia", "D", "Lumen Field", "Seattle"),

@@ -60,8 +60,7 @@ export default function Bracket({ fixtures, results, resolved }: Props) {
         key={m}
         className="rounded-lg bg-slate-900/70 ring-1 ring-slate-800 p-2 text-xs w-44 shrink-0"
       >
-        <div className="flex items-center justify-between text-[9px] uppercase tracking-wider text-slate-500 mb-1.5">
-          <span>#{m}</span>
+        <div className="flex items-center justify-end text-[9px] uppercase tracking-wider text-slate-500 mb-1.5">
           <span>{formatDate(f.kickoff_ist, tz)} · {formatTime(f.kickoff_ist, tz)}</span>
         </div>
 
