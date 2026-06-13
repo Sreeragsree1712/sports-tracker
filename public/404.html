@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sports Tracker</title>
+    <script>
+      // SPA fallback for GitHub Pages: rewrite the requested URL into a query
+      // parameter so index.html can pick it up and replace history.
+      (function () {
+        var l = window.location;
+        var base = '/sports-tracker/';
+        var path = l.pathname.replace(base, '/');
+        l.replace(base + '?p=' + encodeURIComponent(path) + (l.search ? '&q=' + encodeURIComponent(l.search.slice(1)) : '') + l.hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

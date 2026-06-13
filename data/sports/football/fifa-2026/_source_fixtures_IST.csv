@@ -1,0 +1,105 @@
+Match #,Stage,Matchup,Venue,City,Local Date,Local Time,Local TZ (UTC offset),IST Day,IST Date,IST Time
+1,Group A,Mexico vs South Africa,Estadio Azteca,Mexico City,"Thu, 11 Jun 2026",3:00 PM,UTC-6:00,Friday,12 Jun 2026,2:30 AM
+2,Group A,South Korea vs Czechia,Estadio Akron,Guadalajara,"Thu, 11 Jun 2026",8:00 PM,UTC-6:00,Friday,12 Jun 2026,7:30 AM
+3,Group B,Canada vs Bosnia and Herzegovina,BMO Field,Toronto,"Fri, 12 Jun 2026",3:00 PM,UTC-4:00,Saturday,13 Jun 2026,12:30 AM
+4,Group D,USA vs Paraguay,SoFi Stadium,Los Angeles,"Fri, 12 Jun 2026",6:00 PM,UTC-7:00,Saturday,13 Jun 2026,6:30 AM
+5,Group C,Haiti vs Scotland,Gillette Stadium,Boston,"Sat, 13 Jun 2026",9:00 PM,UTC-4:00,Sunday,14 Jun 2026,6:30 AM
+6,Group D,Australia vs Turkiye,BC Place,Vancouver,"Fri, 12 Jun 2026",9:00 PM,UTC-7:00,Saturday,13 Jun 2026,9:30 AM
+7,Group C,Brazil vs Morocco,MetLife Stadium,New York/New Jersey,"Sat, 13 Jun 2026",6:00 PM,UTC-4:00,Sunday,14 Jun 2026,3:30 AM
+8,Group B,Qatar vs Switzerland,Levi's Stadium,San Francisco Bay Area,"Sat, 13 Jun 2026",12:00 PM,UTC-7:00,Sunday,14 Jun 2026,12:30 AM
+9,Group E,Ivory Coast vs Ecuador,Lincoln Financial Field,Philadelphia,"Sun, 14 Jun 2026",7:00 PM,UTC-4:00,Monday,15 Jun 2026,4:30 AM
+10,Group E,Germany vs Curacao,NRG Stadium,Houston,"Sun, 14 Jun 2026",12:00 PM,UTC-5:00,Sunday,14 Jun 2026,10:30 PM
+11,Group F,Netherlands vs Japan,AT&T Stadium,Dallas,"Sun, 14 Jun 2026",3:00 PM,UTC-5:00,Monday,15 Jun 2026,1:30 AM
+12,Group F,Sweden vs Tunisia,Estadio BBVA,Monterrey,"Sun, 14 Jun 2026",8:00 PM,UTC-6:00,Monday,15 Jun 2026,7:30 AM
+13,Group H,Saudi Arabia vs Uruguay,Hard Rock Stadium,Miami,"Mon, 15 Jun 2026",6:00 PM,UTC-4:00,Tuesday,16 Jun 2026,3:30 AM
+14,Group H,Spain vs Cape Verde,Mercedes-Benz Stadium,Atlanta,"Mon, 15 Jun 2026",12:00 PM,UTC-4:00,Monday,15 Jun 2026,9:30 PM
+15,Group G,Iran vs New Zealand,SoFi Stadium,Los Angeles,"Mon, 15 Jun 2026",6:00 PM,UTC-7:00,Tuesday,16 Jun 2026,6:30 AM
+16,Group G,Belgium vs Egypt,Lumen Field,Seattle,"Mon, 15 Jun 2026",12:00 PM,UTC-7:00,Tuesday,16 Jun 2026,12:30 AM
+17,Group I,France vs Senegal,MetLife Stadium,New York/New Jersey,"Tue, 16 Jun 2026",3:00 PM,UTC-4:00,Wednesday,17 Jun 2026,12:30 AM
+18,Group I,Iraq vs Norway,Gillette Stadium,Boston,"Tue, 16 Jun 2026",6:00 PM,UTC-4:00,Wednesday,17 Jun 2026,3:30 AM
+19,Group J,Argentina vs Algeria,Arrowhead Stadium,Kansas City,"Tue, 16 Jun 2026",8:00 PM,UTC-5:00,Wednesday,17 Jun 2026,6:30 AM
+20,Group J,Austria vs Jordan,Levi's Stadium,San Francisco Bay Area,"Tue, 16 Jun 2026",9:00 PM,UTC-7:00,Wednesday,17 Jun 2026,9:30 AM
+21,Group L,Ghana vs Panama,BMO Field,Toronto,"Wed, 17 Jun 2026",7:00 PM,UTC-4:00,Thursday,18 Jun 2026,4:30 AM
+22,Group L,England vs Croatia,AT&T Stadium,Dallas,"Wed, 17 Jun 2026",3:00 PM,UTC-5:00,Thursday,18 Jun 2026,1:30 AM
+23,Group K,Portugal vs Congo DR,NRG Stadium,Houston,"Wed, 17 Jun 2026",12:00 PM,UTC-5:00,Wednesday,17 Jun 2026,10:30 PM
+24,Group K,Uzbekistan vs Colombia,Estadio Azteca,Mexico City,"Wed, 17 Jun 2026",8:00 PM,UTC-6:00,Thursday,18 Jun 2026,7:30 AM
+25,Group A,Czechia vs South Africa,Mercedes-Benz Stadium,Atlanta,"Thu, 18 Jun 2026",12:00 PM,UTC-4:00,Thursday,18 Jun 2026,9:30 PM
+26,Group B,Switzerland vs Bosnia and Herzegovina,SoFi Stadium,Los Angeles,"Thu, 18 Jun 2026",12:00 PM,UTC-7:00,Friday,19 Jun 2026,12:30 AM
+27,Group B,Canada vs Qatar,BC Place,Vancouver,"Thu, 18 Jun 2026",3:00 PM,UTC-7:00,Friday,19 Jun 2026,3:30 AM
+28,Group A,Mexico vs South Korea,Estadio Akron,Guadalajara,"Thu, 18 Jun 2026",7:00 PM,UTC-6:00,Friday,19 Jun 2026,6:30 AM
+29,Group C,Brazil vs Haiti,Lincoln Financial Field,Philadelphia,"Fri, 19 Jun 2026",9:00 PM,UTC-4:00,Saturday,20 Jun 2026,6:30 AM
+30,Group C,Scotland vs Morocco,Gillette Stadium,Boston,"Fri, 19 Jun 2026",6:00 PM,UTC-4:00,Saturday,20 Jun 2026,3:30 AM
+31,Group D,Turkiye vs Paraguay,Levi's Stadium,San Francisco Bay Area,"Fri, 19 Jun 2026",8:00 PM,UTC-7:00,Saturday,20 Jun 2026,8:30 AM
+32,Group D,USA vs Australia,Lumen Field,Seattle,"Fri, 19 Jun 2026",12:00 PM,UTC-7:00,Saturday,20 Jun 2026,12:30 AM
+33,Group E,Germany vs Ivory Coast,BMO Field,Toronto,"Sat, 20 Jun 2026",4:00 PM,UTC-4:00,Sunday,21 Jun 2026,1:30 AM
+34,Group E,Ecuador vs Curacao,Arrowhead Stadium,Kansas City,"Sat, 20 Jun 2026",7:00 PM,UTC-5:00,Sunday,21 Jun 2026,5:30 AM
+35,Group F,Netherlands vs Sweden,NRG Stadium,Houston,"Sat, 20 Jun 2026",12:00 PM,UTC-5:00,Saturday,20 Jun 2026,10:30 PM
+36,Group F,Tunisia vs Japan,Estadio BBVA,Monterrey,"Sat, 20 Jun 2026",10:00 PM,UTC-6:00,Sunday,21 Jun 2026,9:30 AM
+37,Group H,Uruguay vs Cape Verde,Hard Rock Stadium,Miami,"Sun, 21 Jun 2026",6:00 PM,UTC-4:00,Monday,22 Jun 2026,3:30 AM
+38,Group H,Spain vs Saudi Arabia,Mercedes-Benz Stadium,Atlanta,"Sun, 21 Jun 2026",12:00 PM,UTC-4:00,Sunday,21 Jun 2026,9:30 PM
+39,Group G,Belgium vs Iran,SoFi Stadium,Los Angeles,"Sun, 21 Jun 2026",12:00 PM,UTC-7:00,Monday,22 Jun 2026,12:30 AM
+40,Group G,New Zealand vs Egypt,BC Place,Vancouver,"Sun, 21 Jun 2026",6:00 PM,UTC-7:00,Monday,22 Jun 2026,6:30 AM
+41,Group I,Norway vs Senegal,MetLife Stadium,New York/New Jersey,"Mon, 22 Jun 2026",8:00 PM,UTC-4:00,Tuesday,23 Jun 2026,5:30 AM
+42,Group I,France vs Iraq,Lincoln Financial Field,Philadelphia,"Mon, 22 Jun 2026",5:00 PM,UTC-4:00,Tuesday,23 Jun 2026,2:30 AM
+43,Group J,Argentina vs Austria,AT&T Stadium,Dallas,"Mon, 22 Jun 2026",12:00 PM,UTC-5:00,Monday,22 Jun 2026,10:30 PM
+44,Group J,Jordan vs Algeria,Levi's Stadium,San Francisco Bay Area,"Mon, 22 Jun 2026",8:00 PM,UTC-7:00,Tuesday,23 Jun 2026,8:30 AM
+45,Group L,England vs Ghana,Gillette Stadium,Boston,"Tue, 23 Jun 2026",4:00 PM,UTC-4:00,Wednesday,24 Jun 2026,1:30 AM
+46,Group L,Panama vs Croatia,BMO Field,Toronto,"Tue, 23 Jun 2026",7:00 PM,UTC-4:00,Wednesday,24 Jun 2026,4:30 AM
+47,Group K,Portugal vs Uzbekistan,NRG Stadium,Houston,"Tue, 23 Jun 2026",12:00 PM,UTC-5:00,Tuesday,23 Jun 2026,10:30 PM
+48,Group K,Colombia vs Congo DR,Estadio Akron,Guadalajara,"Tue, 23 Jun 2026",8:00 PM,UTC-6:00,Wednesday,24 Jun 2026,7:30 AM
+49,Group C,Scotland vs Brazil,Hard Rock Stadium,Miami,"Wed, 24 Jun 2026",6:00 PM,UTC-4:00,Thursday,25 Jun 2026,3:30 AM
+50,Group C,Morocco vs Haiti,Mercedes-Benz Stadium,Atlanta,"Wed, 24 Jun 2026",6:00 PM,UTC-4:00,Thursday,25 Jun 2026,3:30 AM
+51,Group B,Switzerland vs Canada,BC Place,Vancouver,"Wed, 24 Jun 2026",12:00 PM,UTC-7:00,Thursday,25 Jun 2026,12:30 AM
+52,Group B,Bosnia and Herzegovina vs Qatar,Lumen Field,Seattle,"Wed, 24 Jun 2026",12:00 PM,UTC-7:00,Thursday,25 Jun 2026,12:30 AM
+53,Group A,Czechia vs Mexico,Estadio Azteca,Mexico City,"Wed, 24 Jun 2026",7:00 PM,UTC-6:00,Thursday,25 Jun 2026,6:30 AM
+54,Group A,South Africa vs South Korea,Estadio BBVA,Monterrey,"Wed, 24 Jun 2026",7:00 PM,UTC-6:00,Thursday,25 Jun 2026,6:30 AM
+55,Group E,Curacao vs Ivory Coast,Lincoln Financial Field,Philadelphia,"Thu, 25 Jun 2026",4:00 PM,UTC-4:00,Friday,26 Jun 2026,1:30 AM
+56,Group E,Ecuador vs Germany,MetLife Stadium,New York/New Jersey,"Thu, 25 Jun 2026",4:00 PM,UTC-4:00,Friday,26 Jun 2026,1:30 AM
+57,Group F,Japan vs Sweden,AT&T Stadium,Dallas,"Thu, 25 Jun 2026",6:00 PM,UTC-5:00,Friday,26 Jun 2026,4:30 AM
+58,Group F,Tunisia vs Netherlands,Arrowhead Stadium,Kansas City,"Thu, 25 Jun 2026",6:00 PM,UTC-5:00,Friday,26 Jun 2026,4:30 AM
+59,Group D,Turkiye vs USA,SoFi Stadium,Los Angeles,"Thu, 25 Jun 2026",7:00 PM,UTC-7:00,Friday,26 Jun 2026,7:30 AM
+60,Group D,Paraguay vs Australia,Levi's Stadium,San Francisco Bay Area,"Thu, 25 Jun 2026",7:00 PM,UTC-7:00,Friday,26 Jun 2026,7:30 AM
+61,Group I,Norway vs France,Gillette Stadium,Boston,"Fri, 26 Jun 2026",3:00 PM,UTC-4:00,Saturday,27 Jun 2026,12:30 AM
+62,Group I,Senegal vs Iraq,BMO Field,Toronto,"Fri, 26 Jun 2026",3:00 PM,UTC-4:00,Saturday,27 Jun 2026,12:30 AM
+63,Group G,Egypt vs Iran,Lumen Field,Seattle,"Fri, 26 Jun 2026",8:00 PM,UTC-7:00,Saturday,27 Jun 2026,8:30 AM
+64,Group G,New Zealand vs Belgium,BC Place,Vancouver,"Fri, 26 Jun 2026",8:00 PM,UTC-7:00,Saturday,27 Jun 2026,8:30 AM
+65,Group H,Cape Verde vs Saudi Arabia,NRG Stadium,Houston,"Fri, 26 Jun 2026",7:00 PM,UTC-5:00,Saturday,27 Jun 2026,5:30 AM
+66,Group H,Uruguay vs Spain,Estadio Akron,Guadalajara,"Fri, 26 Jun 2026",6:00 PM,UTC-6:00,Saturday,27 Jun 2026,5:30 AM
+67,Group L,Panama vs England,MetLife Stadium,New York/New Jersey,"Sat, 27 Jun 2026",5:00 PM,UTC-4:00,Sunday,28 Jun 2026,2:30 AM
+68,Group L,Croatia vs Ghana,Lincoln Financial Field,Philadelphia,"Sat, 27 Jun 2026",5:00 PM,UTC-4:00,Sunday,28 Jun 2026,2:30 AM
+69,Group J,Algeria vs Austria,Arrowhead Stadium,Kansas City,"Sat, 27 Jun 2026",9:00 PM,UTC-5:00,Sunday,28 Jun 2026,7:30 AM
+70,Group J,Jordan vs Argentina,AT&T Stadium,Dallas,"Sat, 27 Jun 2026",9:00 PM,UTC-5:00,Sunday,28 Jun 2026,7:30 AM
+71,Group K,Colombia vs Portugal,Hard Rock Stadium,Miami,"Sat, 27 Jun 2026",7:30 PM,UTC-4:00,Sunday,28 Jun 2026,5:00 AM
+72,Group K,Congo DR vs Uzbekistan,Mercedes-Benz Stadium,Atlanta,"Sat, 27 Jun 2026",7:30 PM,UTC-4:00,Sunday,28 Jun 2026,5:00 AM
+73,Round of 32,Group A Runner-Up vs Group B Runner-Up,SoFi Stadium,Los Angeles,"Sun, 28 Jun 2026",12:00 PM,UTC-7:00,Monday,29 Jun 2026,12:30 AM
+74,Round of 32,Group E Winner vs Best 3rd (A/B/C/D/F),Gillette Stadium,Boston,"Mon, 29 Jun 2026",4:30 PM,UTC-4:00,Tuesday,30 Jun 2026,2:00 AM
+75,Round of 32,Group F Winner vs Group C Runner-Up,Estadio BBVA,Monterrey,"Mon, 29 Jun 2026",7:00 PM,UTC-6:00,Tuesday,30 Jun 2026,6:30 AM
+76,Round of 32,Group C Winner vs Group F Runner-Up,NRG Stadium,Houston,"Mon, 29 Jun 2026",12:00 PM,UTC-5:00,Monday,29 Jun 2026,10:30 PM
+77,Round of 32,Group I Winner vs Best 3rd (C/D/F/G/H),MetLife Stadium,New York/New Jersey,"Tue, 30 Jun 2026",5:00 PM,UTC-4:00,Wednesday,01 Jul 2026,2:30 AM
+78,Round of 32,Group E Runner-Up vs Group I Runner-Up,AT&T Stadium,Dallas,"Tue, 30 Jun 2026",12:00 PM,UTC-5:00,Tuesday,30 Jun 2026,10:30 PM
+79,Round of 32,Group A Winner vs Best 3rd (C/E/F/H/I),Estadio Azteca,Mexico City,"Tue, 30 Jun 2026",7:00 PM,UTC-6:00,Wednesday,01 Jul 2026,6:30 AM
+80,Round of 32,Group L Winner vs Best 3rd (E/H/I/J/K),Mercedes-Benz Stadium,Atlanta,"Wed, 01 Jul 2026",12:00 PM,UTC-4:00,Wednesday,01 Jul 2026,9:30 PM
+81,Round of 32,Group D Winner vs Best 3rd (B/E/F/I/J),Levi's Stadium,San Francisco Bay Area,"Wed, 01 Jul 2026",5:00 PM,UTC-7:00,Thursday,02 Jul 2026,5:30 AM
+82,Round of 32,Group G Winner vs Best 3rd (A/E/H/I/J),Lumen Field,Seattle,"Wed, 01 Jul 2026",1:00 PM,UTC-7:00,Thursday,02 Jul 2026,1:30 AM
+83,Round of 32,Group K Runner-Up vs Group L Runner-Up,BMO Field,Toronto,"Thu, 02 Jul 2026",7:00 PM,UTC-4:00,Friday,03 Jul 2026,4:30 AM
+84,Round of 32,Group H Winner vs Group J Runner-Up,SoFi Stadium,Los Angeles,"Thu, 02 Jul 2026",12:00 PM,UTC-7:00,Friday,03 Jul 2026,12:30 AM
+85,Round of 32,Group B Winner vs Best 3rd (E/F/G/I/J),BC Place,Vancouver,"Thu, 02 Jul 2026",8:00 PM,UTC-7:00,Friday,03 Jul 2026,8:30 AM
+86,Round of 32,Group J Winner vs Group H Runner-Up,Hard Rock Stadium,Miami,"Fri, 03 Jul 2026",6:00 PM,UTC-4:00,Saturday,04 Jul 2026,3:30 AM
+87,Round of 32,Group K Winner vs Best 3rd (D/E/I/J/L),Arrowhead Stadium,Kansas City,"Fri, 03 Jul 2026",8:30 PM,UTC-5:00,Saturday,04 Jul 2026,7:00 AM
+88,Round of 32,Group D Runner-Up vs Group G Runner-Up,AT&T Stadium,Dallas,"Fri, 03 Jul 2026",1:00 PM,UTC-5:00,Friday,03 Jul 2026,11:30 PM
+89,Round of 16,Match 74 Winner vs Match 77 Winner,Lincoln Financial Field,Philadelphia,"Sat, 04 Jul 2026",5:00 PM,UTC-4:00,Sunday,05 Jul 2026,2:30 AM
+90,Round of 16,Match 73 Winner vs Match 75 Winner,NRG Stadium,Houston,"Sat, 04 Jul 2026",12:00 PM,UTC-5:00,Saturday,04 Jul 2026,10:30 PM
+91,Round of 16,Match 76 Winner vs Match 78 Winner,MetLife Stadium,New York/New Jersey,"Sun, 05 Jul 2026",4:00 PM,UTC-4:00,Monday,06 Jul 2026,1:30 AM
+92,Round of 16,Match 79 Winner vs Match 80 Winner,Estadio Azteca,Mexico City,"Sun, 05 Jul 2026",6:00 PM,UTC-6:00,Monday,06 Jul 2026,5:30 AM
+93,Round of 16,Match 83 Winner vs Match 84 Winner,AT&T Stadium,Dallas,"Mon, 06 Jul 2026",2:00 PM,UTC-5:00,Tuesday,07 Jul 2026,12:30 AM
+94,Round of 16,Match 81 Winner vs Match 82 Winner,Lumen Field,Seattle,"Mon, 06 Jul 2026",5:00 PM,UTC-7:00,Tuesday,07 Jul 2026,5:30 AM
+95,Round of 16,Match 86 Winner vs Match 88 Winner,Mercedes-Benz Stadium,Atlanta,"Tue, 07 Jul 2026",12:00 PM,UTC-4:00,Tuesday,07 Jul 2026,9:30 PM
+96,Round of 16,Match 85 Winner vs Match 87 Winner,BC Place,Vancouver,"Tue, 07 Jul 2026",1:00 PM,UTC-7:00,Wednesday,08 Jul 2026,1:30 AM
+97,Quarter-final,Match 89 Winner vs Match 90 Winner,Gillette Stadium,Boston,"Thu, 09 Jul 2026",4:00 PM,UTC-4:00,Friday,10 Jul 2026,1:30 AM
+98,Quarter-final,Match 93 Winner vs Match 94 Winner,SoFi Stadium,Los Angeles,"Fri, 10 Jul 2026",12:00 PM,UTC-7:00,Saturday,11 Jul 2026,12:30 AM
+99,Quarter-final,Match 91 Winner vs Match 92 Winner,Hard Rock Stadium,Miami,"Sat, 11 Jul 2026",5:00 PM,UTC-4:00,Sunday,12 Jul 2026,2:30 AM
+100,Quarter-final,Match 95 Winner vs Match 96 Winner,Arrowhead Stadium,Kansas City,"Sat, 11 Jul 2026",8:00 PM,UTC-5:00,Sunday,12 Jul 2026,6:30 AM
+101,Semi-final,Match 97 Winner vs Match 98 Winner,AT&T Stadium,Dallas,"Tue, 14 Jul 2026",2:00 PM,UTC-5:00,Wednesday,15 Jul 2026,12:30 AM
+102,Semi-final,Match 99 Winner vs Match 100 Winner,Mercedes-Benz Stadium,Atlanta,"Wed, 15 Jul 2026",3:00 PM,UTC-4:00,Thursday,16 Jul 2026,12:30 AM
+103,Third-place play-off,Match 101 Loser vs Match 102 Loser,Hard Rock Stadium,Miami,"Sat, 18 Jul 2026",5:00 PM,UTC-4:00,Sunday,19 Jul 2026,2:30 AM
+104,Final,Match 101 Winner vs Match 102 Winner,MetLife Stadium,New York/New Jersey,"Sun, 19 Jul 2026",3:00 PM,UTC-4:00,Monday,20 Jul 2026,12:30 AM

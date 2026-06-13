@@ -1,0 +1,35 @@
+name: Update results
+
+on:
+  schedule:
+    # Every 30 minutes. GitHub Actions runs the cron in UTC.
+    # Tournament window: 11 Jun 2026 → 19 Jul 2026.
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - name: Scrape Wikipedia and update results.json
+        run: node scripts/update-results.mjs
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "results-bot"
+          git config user.email "actions@github.com"
+          git add data/sports/football/fifa-2026/results.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore(results): auto-update FIFA 2026 results"
+            git push
+          fi

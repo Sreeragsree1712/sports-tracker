@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/sports-tracker/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="description" content="Multi-sport scores & schedules in IST. Launching with FIFA World Cup 2026." />
+    <title>Sports Tracker — FIFA World Cup 2026 (IST)</title>
+    <script>
+      // Pair with public/404.html: if we were redirected via ?p=/path, restore
+      // the original URL using replaceState before the SPA mounts.
+      (function () {
+        var q = new URLSearchParams(window.location.search);
+        var p = q.get('p');
+        if (p) {
+          q.delete('p');
+          var saved = q.get('q');
+          q.delete('q');
+          var rest = q.toString();
+          var search = saved ? ('?' + saved + (rest ? '&' + rest : '')) : (rest ? '?' + rest : '');
+          var base = '/sports-tracker';
+          window.history.replaceState(null, '', base + p + search + window.location.hash);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
