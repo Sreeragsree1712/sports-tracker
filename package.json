@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "author": "Sreerag T",
+  "description": "Multi-sport scores & schedules website. Launching with FIFA World Cup 2026.",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

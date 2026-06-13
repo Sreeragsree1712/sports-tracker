@@ -68,7 +68,17 @@ function Footer() {
   return (
     <footer className="border-t border-slate-800 mt-12">
       <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-slate-500 flex items-center justify-between flex-wrap gap-2">
-        <span>Sports Tracker · Static site, free forever.</span>
+        <span>
+          &copy; 2026 Sreerag T · MIT licensed ·{' '}
+          <a
+            href="https://github.com/sreeragsree1712/sports-tracker"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-slate-300 underline-offset-2 hover:underline"
+          >
+            Source
+          </a>
+        </span>
         <span title={label}>Times in {abbr} · Data via Wikipedia</span>
       </div>
     </footer>

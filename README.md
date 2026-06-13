@@ -1,5 +1,7 @@
 # sports-tracker
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Multi-sport scores & schedules website. Launching with **FIFA World Cup 2026**, with kickoff times rendered in **your timezone** (auto-detected, with a manual picker for switching).
 
 > Static site (React + Vite + Tailwind), free-hosted on GitHub Pages. A scheduled GitHub Action scrapes Wikipedia every 30 minutes during the tournament window and commits results back into the repo.
@@ -122,3 +124,7 @@ Two-layer model:
 ## Status
 
 Working MVP — Phase 1 → 7 of `HANDOFF.md` complete, plus the timezone-picker rework. See `HANDOFF.md` for design history and decisions, and `TODO.md` for the prioritised backlog.
+
+## License
+
+MIT &copy; 2026 [Sreerag T](https://github.com/sreeragsree1712). See [`LICENSE`](LICENSE) for the full text.
