@@ -2,21 +2,103 @@
   "1": {
     "home": 2,
     "away": 0,
-    "status": "finished"
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Mexico",
+        "player": "Quiñones",
+        "minute": "9"
+      },
+      {
+        "team": "Mexico",
+        "player": "Jiménez",
+        "minute": "67"
+      }
+    ]
   },
   "2": {
     "home": 2,
     "away": 1,
-    "status": "finished"
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Korea Republic",
+        "player": "Hwang In-beom",
+        "minute": "67"
+      },
+      {
+        "team": "Korea Republic",
+        "player": "Oh Hyeon-gyu",
+        "minute": "80"
+      }
+    ]
   },
   "3": {
     "home": 1,
     "away": 1,
-    "status": "finished"
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Canada",
+        "player": "Larin",
+        "minute": "78"
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "player": "Lukić",
+        "minute": "21"
+      }
+    ]
   },
   "4": {
     "home": 4,
     "away": 1,
-    "status": "finished"
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Paraguay",
+        "player": "Bobadilla",
+        "minute": "7",
+        "type": "og"
+      },
+      {
+        "team": "United States",
+        "player": "Balogun",
+        "minute": "31"
+      },
+      {
+        "team": "United States",
+        "player": "Balogun",
+        "minute": "45+5"
+      },
+      {
+        "team": "United States",
+        "player": "Reyna",
+        "minute": "90+8"
+      },
+      {
+        "team": "Paraguay",
+        "player": "Maurício",
+        "minute": "73"
+      }
+    ]
+  },
+  "8": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Qatar",
+        "player": "Khoukhi",
+        "minute": "90+4"
+      },
+      {
+        "team": "Switzerland",
+        "player": "Embolo",
+        "minute": "17",
+        "type": "pen"
+      }
+    ]
   }
 }
