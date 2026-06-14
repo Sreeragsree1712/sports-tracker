@@ -1,0 +1,9 @@
+{
+  "_comment": "FIFA World Cup 2026 individual awards. Boot trio is auto-computed from results.json scorers; the rest is announced after the final and edited here by hand. Each manual award accepts: { player, team, note } or null until announced.",
+  "goldenBall": null,
+  "silverBall": null,
+  "bronzeBall": null,
+  "goldenGlove": null,
+  "bestYoungPlayer": null,
+  "fairPlay": null
+}

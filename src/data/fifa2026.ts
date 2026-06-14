@@ -1,11 +1,14 @@
 import fixturesJson from '../../data/sports/football/fifa-2026/fixtures.json';
 import groupsJson from '../../data/sports/football/fifa-2026/groups.json';
 import resultsJson from '../../data/sports/football/fifa-2026/results.json';
+import awardsJson from '../../data/sports/football/fifa-2026/awards.json';
 import type { Fixture, GroupsMap, ResultsMap } from '../lib/types';
+import type { AwardsData } from '../lib/awards';
 
 export const fixtures = fixturesJson as Fixture[];
 export const groups = groupsJson as GroupsMap;
 export const results = resultsJson as ResultsMap;
+export const awards = awardsJson as AwardsData;
 
 /**
  * The fixtures.json (auto-generated) sometimes uses common short names while

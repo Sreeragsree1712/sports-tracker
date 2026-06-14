@@ -5,7 +5,7 @@ const tabs = [
   { to: '', label: 'Fixtures', end: true },
   { to: 'groups', label: 'Groups' },
   { to: 'bracket', label: 'Bracket' },
-  { to: 'top-scorers', label: 'Top scorers' },
+  { to: 'awards', label: 'Awards' },
   { to: 'teams', label: 'Teams' },
 ];
 

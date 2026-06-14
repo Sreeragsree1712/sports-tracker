@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import Landing from './routes/Landing';
 import FifaLayout from './routes/football/fifa2026/Layout';
 import Fixtures from './routes/football/fifa2026/Fixtures';
@@ -6,7 +6,7 @@ import Groups from './routes/football/fifa2026/Groups';
 import Bracket from './routes/football/fifa2026/Bracket';
 import Teams from './routes/football/fifa2026/Teams';
 import Team from './routes/football/fifa2026/Team';
-import TopScorers from './routes/football/fifa2026/TopScorers';
+import Awards from './routes/football/fifa2026/Awards';
 import TimezonePicker from './components/shared/TimezonePicker';
 import { useTimezone } from './lib/TimezoneContext';
 
@@ -21,7 +21,8 @@ export default function App() {
             <Route index element={<Fixtures />} />
             <Route path="groups" element={<Groups />} />
             <Route path="bracket" element={<Bracket />} />
-            <Route path="top-scorers" element={<TopScorers />} />
+            <Route path="awards" element={<Awards />} />
+            <Route path="top-scorers" element={<Navigate to="../awards" replace />} />
             <Route path="teams" element={<Teams />} />
             <Route path="team/:slug" element={<Team />} />
           </Route>
