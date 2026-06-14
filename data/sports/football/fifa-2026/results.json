@@ -83,6 +83,35 @@
       }
     ]
   },
+  "5": {
+    "home": 0,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Scotland",
+        "player": "McGinn",
+        "minute": "28"
+      }
+    ]
+  },
+  "6": {
+    "home": 2,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Australia",
+        "player": "Irankunda",
+        "minute": "27"
+      },
+      {
+        "team": "Australia",
+        "player": "Metcalfe",
+        "minute": "75"
+      }
+    ]
+  },
   "7": {
     "home": 1,
     "away": 1,
