@@ -83,6 +83,23 @@
       }
     ]
   },
+  "7": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Brazil",
+        "player": "Vinícius",
+        "minute": "32"
+      },
+      {
+        "team": "Morocco",
+        "player": "Saibari",
+        "minute": "21"
+      }
+    ]
+  },
   "8": {
     "home": 1,
     "away": 1,
@@ -90,7 +107,7 @@
     "scorers": [
       {
         "team": "Switzerland",
-        "player": "Miro Muheim",
+        "player": "Muheim",
         "minute": "90+4",
         "type": "og"
       },
