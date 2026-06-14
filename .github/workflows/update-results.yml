@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
@@ -23,13 +24,27 @@ jobs:
       - name: Scrape Wikipedia and update results.json
         run: node scripts/update-results.mjs
       - name: Commit changes (if any)
+        id: commit
         run: |
           git config user.name "results-bot"
           git config user.email "actions@github.com"
           git add data/sports/football/fifa-2026/results.json
           if git diff --staged --quiet; then
             echo "No changes."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore(results): auto-update FIFA 2026 results"
             git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # Pushes made with the default GITHUB_TOKEN do NOT trigger other workflows
+      # (GitHub blocks this to prevent recursive runs). Without this dispatch
+      # step, deploy.yml never sees the auto-commit, so the deployed Pages site
+      # keeps serving a stale bundle that has results.json baked in from the
+      # last manual push. Explicitly kick off deploy when we actually pushed.
+      - name: Trigger deploy workflow
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main
