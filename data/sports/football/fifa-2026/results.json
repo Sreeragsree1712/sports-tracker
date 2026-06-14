@@ -149,8 +149,51 @@
     ]
   },
   "10": {
-    "home": 3,
+    "home": 7,
     "away": 1,
-    "status": "finished"
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Germany",
+        "player": "Nmecha",
+        "minute": "6"
+      },
+      {
+        "team": "Germany",
+        "player": "Schlotterbeck",
+        "minute": "38"
+      },
+      {
+        "team": "Germany",
+        "player": "Havertz",
+        "minute": "45+5",
+        "type": "pen"
+      },
+      {
+        "team": "Germany",
+        "player": "Havertz",
+        "minute": "88"
+      },
+      {
+        "team": "Germany",
+        "player": "Musiala",
+        "minute": "47"
+      },
+      {
+        "team": "Germany",
+        "player": "Brown",
+        "minute": "68"
+      },
+      {
+        "team": "Germany",
+        "player": "Undav",
+        "minute": "78"
+      },
+      {
+        "team": "Curacao",
+        "player": "Comenencia",
+        "minute": "21"
+      }
+    ]
   }
 }
