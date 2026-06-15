@@ -155,7 +155,7 @@
     "scorers": [
       {
         "team": "Cote d'Ivoire",
-        "player": "Diallo",
+        "player": "A. Diallo",
         "minute": "90"
       }
     ]
@@ -271,5 +271,10 @@
         "minute": "43"
       }
     ]
+  },
+  "14": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
   }
 }
