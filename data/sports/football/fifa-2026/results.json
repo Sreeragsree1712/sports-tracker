@@ -148,6 +148,18 @@
       }
     ]
   },
+  "9": {
+    "home": 1,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Cote d'Ivoire",
+        "player": "Diallo",
+        "minute": "90"
+      }
+    ]
+  },
   "10": {
     "home": 7,
     "away": 1,
@@ -203,8 +215,8 @@
     "scorers": [
       {
         "team": "Netherlands",
-        "player": "van Dijk",
-        "minute": "51"
+        "player": "Van Dijk",
+        "minute": "50"
       },
       {
         "team": "Netherlands",
@@ -220,6 +232,43 @@
         "team": "Japan",
         "player": "Kamada",
         "minute": "88"
+      }
+    ]
+  },
+  "12": {
+    "home": 5,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Sweden",
+        "player": "Ayari",
+        "minute": "7"
+      },
+      {
+        "team": "Sweden",
+        "player": "Ayari",
+        "minute": "90+6"
+      },
+      {
+        "team": "Sweden",
+        "player": "Isak",
+        "minute": "30"
+      },
+      {
+        "team": "Sweden",
+        "player": "Gyökeres",
+        "minute": "59"
+      },
+      {
+        "team": "Sweden",
+        "player": "Svanberg",
+        "minute": "84"
+      },
+      {
+        "team": "Tunisia",
+        "player": "Rekik",
+        "minute": "43"
       }
     ]
   }
