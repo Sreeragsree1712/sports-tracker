@@ -276,5 +276,23 @@
     "home": 0,
     "away": 0,
     "status": "finished"
+  },
+  "16": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Egypt",
+        "player": "Hany",
+        "minute": "66",
+        "type": "og"
+      },
+      {
+        "team": "Egypt",
+        "player": "Ashour",
+        "minute": "19"
+      }
+    ]
   }
 }
