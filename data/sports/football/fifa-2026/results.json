@@ -338,5 +338,32 @@
         "minute": "19"
       }
     ]
+  },
+  "17": {
+    "home": 3,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "France",
+        "player": "Mbappé",
+        "minute": "66"
+      },
+      {
+        "team": "France",
+        "player": "Mbappé",
+        "minute": "90+6"
+      },
+      {
+        "team": "France",
+        "player": "Barcola",
+        "minute": "82"
+      },
+      {
+        "team": "Senegal",
+        "player": "Mbaye",
+        "minute": "90+5"
+      }
+    ]
   }
 }
