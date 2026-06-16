@@ -272,6 +272,23 @@
       }
     ]
   },
+  "13": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Saudi Arabia",
+        "player": "Al-Amri",
+        "minute": "41"
+      },
+      {
+        "team": "Uruguay",
+        "player": "M. Araújo",
+        "minute": "80"
+      }
+    ]
+  },
   "14": {
     "home": 0,
     "away": 0,
