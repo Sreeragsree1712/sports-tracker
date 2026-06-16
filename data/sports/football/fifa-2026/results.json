@@ -294,6 +294,33 @@
     "away": 0,
     "status": "finished"
   },
+  "15": {
+    "home": 2,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Iran",
+        "player": "Rezaeian",
+        "minute": "32"
+      },
+      {
+        "team": "Iran",
+        "player": "Mohebi",
+        "minute": "64"
+      },
+      {
+        "team": "New Zealand",
+        "player": "Just",
+        "minute": "7"
+      },
+      {
+        "team": "New Zealand",
+        "player": "Just",
+        "minute": "54"
+      }
+    ]
+  },
   "16": {
     "home": 1,
     "away": 1,
