@@ -450,6 +450,44 @@
       }
     ]
   },
+  "22": {
+    "home": 4,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "England",
+        "player": "Kane",
+        "minute": "12",
+        "type": "pen"
+      },
+      {
+        "team": "England",
+        "player": "Kane",
+        "minute": "42"
+      },
+      {
+        "team": "England",
+        "player": "Bellingham",
+        "minute": "47"
+      },
+      {
+        "team": "England",
+        "player": "Rashford",
+        "minute": "85"
+      },
+      {
+        "team": "Croatia",
+        "player": "Baturina",
+        "minute": "36"
+      },
+      {
+        "team": "Croatia",
+        "player": "Musa",
+        "minute": "45+5"
+      }
+    ]
+  },
   "23": {
     "home": 1,
     "away": 1,
