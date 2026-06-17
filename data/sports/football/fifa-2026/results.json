@@ -449,5 +449,22 @@
         "minute": "50"
       }
     ]
+  },
+  "23": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Portugal",
+        "player": "J. Neves",
+        "minute": "6"
+      },
+      {
+        "team": "Congo DR",
+        "player": "Wissa",
+        "minute": "45+5"
+      }
+    ]
   }
 }
