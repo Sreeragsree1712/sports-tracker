@@ -398,5 +398,56 @@
         "type": "og"
       }
     ]
+  },
+  "19": {
+    "home": 3,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Argentina",
+        "player": "Messi",
+        "minute": "17"
+      },
+      {
+        "team": "Argentina",
+        "player": "Messi",
+        "minute": "60"
+      },
+      {
+        "team": "Argentina",
+        "player": "Messi",
+        "minute": "76"
+      }
+    ]
+  },
+  "20": {
+    "home": 3,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Austria",
+        "player": "Schmid",
+        "minute": "21"
+      },
+      {
+        "team": "Jordan",
+        "player": "Al-Arab",
+        "minute": "77",
+        "type": "og"
+      },
+      {
+        "team": "Austria",
+        "player": "Arnautović",
+        "minute": "90+12",
+        "type": "pen"
+      },
+      {
+        "team": "Jordan",
+        "player": "Olwan",
+        "minute": "50"
+      }
+    ]
   }
 }
