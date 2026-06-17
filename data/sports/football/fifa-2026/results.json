@@ -365,5 +365,38 @@
         "minute": "90+5"
       }
     ]
+  },
+  "18": {
+    "home": 1,
+    "away": 4,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Iraq",
+        "player": "Hussein",
+        "minute": "39"
+      },
+      {
+        "team": "Norway",
+        "player": "Haaland",
+        "minute": "29"
+      },
+      {
+        "team": "Norway",
+        "player": "Haaland",
+        "minute": "43"
+      },
+      {
+        "team": "Norway",
+        "player": "Østigård",
+        "minute": "76"
+      },
+      {
+        "team": "Norway",
+        "player": "Hussein",
+        "minute": "90+6",
+        "type": "og"
+      }
+    ]
   }
 }
