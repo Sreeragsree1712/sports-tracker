@@ -543,5 +543,23 @@
         "minute": "90+9"
       }
     ]
+  },
+  "25": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Czechia",
+        "player": "Sadílek",
+        "minute": "6"
+      },
+      {
+        "team": "South Africa",
+        "player": "Mokoena",
+        "minute": "83",
+        "type": "pen"
+      }
+    ]
   }
 }
