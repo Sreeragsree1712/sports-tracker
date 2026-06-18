@@ -450,6 +450,18 @@
       }
     ]
   },
+  "21": {
+    "home": 1,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Ghana",
+        "player": "Yirenkyi",
+        "minute": "90+5"
+      }
+    ]
+  },
   "22": {
     "home": 4,
     "away": 2,
@@ -502,6 +514,33 @@
         "team": "Congo DR",
         "player": "Wissa",
         "minute": "45+5"
+      }
+    ]
+  },
+  "24": {
+    "home": 1,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Uzbekistan",
+        "player": "Fayzullaev",
+        "minute": "60"
+      },
+      {
+        "team": "Colombia",
+        "player": "Muñoz",
+        "minute": "40"
+      },
+      {
+        "team": "Colombia",
+        "player": "Díaz",
+        "minute": "65"
+      },
+      {
+        "team": "Colombia",
+        "player": "Campaz",
+        "minute": "90+9"
       }
     ]
   }
