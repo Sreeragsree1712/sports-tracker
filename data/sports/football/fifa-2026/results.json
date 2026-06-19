@@ -594,5 +594,55 @@
         "minute": "90+3"
       }
     ]
+  },
+  "27": {
+    "home": 6,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Canada",
+        "player": "Larin",
+        "minute": "16"
+      },
+      {
+        "team": "Canada",
+        "player": "J. David",
+        "minute": "29"
+      },
+      {
+        "team": "Canada",
+        "player": "J. David",
+        "minute": "45+3"
+      },
+      {
+        "team": "Canada",
+        "player": "J. David",
+        "minute": "90+2"
+      },
+      {
+        "team": "Canada",
+        "player": "Saliba",
+        "minute": "64"
+      },
+      {
+        "team": "Qatar",
+        "player": "Manai",
+        "minute": "75",
+        "type": "og"
+      }
+    ]
+  },
+  "28": {
+    "home": 1,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Mexico",
+        "player": "Romo",
+        "minute": "50"
+      }
+    ]
   }
 }
