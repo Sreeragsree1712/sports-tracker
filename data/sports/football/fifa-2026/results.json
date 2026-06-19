@@ -644,5 +644,23 @@
         "minute": "50"
       }
     ]
+  },
+  "32": {
+    "home": 2,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Australia",
+        "player": "Burgess",
+        "minute": "11",
+        "type": "og"
+      },
+      {
+        "team": "United States",
+        "player": "Freeman",
+        "minute": "43"
+      }
+    ]
   }
 }
