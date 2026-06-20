@@ -679,6 +679,18 @@
       }
     ]
   },
+  "31": {
+    "home": 0,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Paraguay",
+        "player": "Galarza",
+        "minute": "2"
+      }
+    ]
+  },
   "32": {
     "home": 2,
     "away": 0,
