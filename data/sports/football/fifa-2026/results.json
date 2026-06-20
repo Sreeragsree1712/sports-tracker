@@ -216,7 +216,7 @@
       {
         "team": "Netherlands",
         "player": "Van Dijk",
-        "minute": "50"
+        "minute": "51"
       },
       {
         "team": "Netherlands",
@@ -706,6 +706,43 @@
         "team": "United States",
         "player": "Freeman",
         "minute": "43"
+      }
+    ]
+  },
+  "35": {
+    "home": 5,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Netherlands",
+        "player": "Brobbey",
+        "minute": "5"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Brobbey",
+        "minute": "17"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Gakpo",
+        "minute": "47"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Gakpo",
+        "minute": "54"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Summerville",
+        "minute": "89"
+      },
+      {
+        "team": "Sweden",
+        "player": "Elanga",
+        "minute": "59"
       }
     ]
   }
