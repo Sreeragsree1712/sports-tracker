@@ -645,6 +645,18 @@
       }
     ]
   },
+  "30": {
+    "home": 0,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Morocco",
+        "player": "Saibari",
+        "minute": "2"
+      }
+    ]
+  },
   "32": {
     "home": 2,
     "away": 0,
