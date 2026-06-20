@@ -709,6 +709,28 @@
       }
     ]
   },
+  "33": {
+    "home": 2,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Germany",
+        "player": "Undav",
+        "minute": "68"
+      },
+      {
+        "team": "Germany",
+        "player": "Undav",
+        "minute": "90+4"
+      },
+      {
+        "team": "Cote d'Ivoire",
+        "player": "Kessié",
+        "minute": "30"
+      }
+    ]
+  },
   "35": {
     "home": 5,
     "away": 1,
