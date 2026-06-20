@@ -645,6 +645,28 @@
       }
     ]
   },
+  "29": {
+    "home": 3,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Brazil",
+        "player": "Cunha",
+        "minute": "23"
+      },
+      {
+        "team": "Brazil",
+        "player": "Cunha",
+        "minute": "36"
+      },
+      {
+        "team": "Brazil",
+        "player": "Vinícius",
+        "minute": "45+3"
+      }
+    ]
+  },
   "30": {
     "home": 0,
     "away": 1,
