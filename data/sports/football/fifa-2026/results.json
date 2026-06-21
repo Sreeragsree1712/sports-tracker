@@ -731,6 +731,11 @@
       }
     ]
   },
+  "34": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
+  },
   "35": {
     "home": 5,
     "away": 1,
