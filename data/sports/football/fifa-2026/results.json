@@ -799,5 +799,33 @@
         "minute": "69"
       }
     ]
+  },
+  "38": {
+    "home": 4,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Spain",
+        "player": "Yamal",
+        "minute": "10"
+      },
+      {
+        "team": "Spain",
+        "player": "Oyarzabal",
+        "minute": "21"
+      },
+      {
+        "team": "Spain",
+        "player": "Oyarzabal",
+        "minute": "24"
+      },
+      {
+        "team": "Saudi Arabia",
+        "player": "Al-Tambakti",
+        "minute": "49",
+        "type": "og"
+      }
+    ]
   }
 }
