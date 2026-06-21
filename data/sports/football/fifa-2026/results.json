@@ -772,5 +772,32 @@
         "minute": "59"
       }
     ]
+  },
+  "36": {
+    "home": 0,
+    "away": 4,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Japan",
+        "player": "Kamada",
+        "minute": "4"
+      },
+      {
+        "team": "Japan",
+        "player": "Ueda",
+        "minute": "31"
+      },
+      {
+        "team": "Japan",
+        "player": "Ueda",
+        "minute": "83"
+      },
+      {
+        "team": "Japan",
+        "player": "J. Itō",
+        "minute": "69"
+      }
+    ]
   }
 }
