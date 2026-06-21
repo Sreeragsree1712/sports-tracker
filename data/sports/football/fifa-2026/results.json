@@ -827,5 +827,10 @@
         "type": "og"
       }
     ]
+  },
+  "39": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
   }
 }
