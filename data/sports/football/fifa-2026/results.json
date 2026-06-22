@@ -800,6 +800,33 @@
       }
     ]
   },
+  "37": {
+    "home": 2,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Uruguay",
+        "player": "M. Araújo",
+        "minute": "44"
+      },
+      {
+        "team": "Uruguay",
+        "player": "Canobbio",
+        "minute": "45+6"
+      },
+      {
+        "team": "Cabo Verde",
+        "player": "K. Pina",
+        "minute": "21"
+      },
+      {
+        "team": "Cabo Verde",
+        "player": "Varela",
+        "minute": "61"
+      }
+    ]
+  },
   "38": {
     "home": 4,
     "away": 0,
