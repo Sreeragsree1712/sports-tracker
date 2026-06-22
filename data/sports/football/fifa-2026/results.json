@@ -859,5 +859,32 @@
     "home": 0,
     "away": 0,
     "status": "finished"
+  },
+  "40": {
+    "home": 1,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "New Zealand",
+        "player": "Surman",
+        "minute": "15"
+      },
+      {
+        "team": "Egypt",
+        "player": "Ziko",
+        "minute": "58"
+      },
+      {
+        "team": "Egypt",
+        "player": "Salah",
+        "minute": "67"
+      },
+      {
+        "team": "Egypt",
+        "player": "Trézéguet",
+        "minute": "82"
+      }
+    ]
   }
 }
