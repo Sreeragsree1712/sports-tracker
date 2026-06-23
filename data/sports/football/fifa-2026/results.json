@@ -887,6 +887,38 @@
       }
     ]
   },
+  "41": {
+    "home": 3,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Norway",
+        "player": "Pedersen",
+        "minute": "43"
+      },
+      {
+        "team": "Norway",
+        "player": "Haaland",
+        "minute": "48"
+      },
+      {
+        "team": "Norway",
+        "player": "Haaland",
+        "minute": "58"
+      },
+      {
+        "team": "Senegal",
+        "player": "I. Sarr",
+        "minute": "53"
+      },
+      {
+        "team": "Senegal",
+        "player": "I. Sarr",
+        "minute": "90+3"
+      }
+    ]
+  },
   "42": {
     "home": 3,
     "away": 0,
@@ -923,6 +955,28 @@
         "team": "Argentina",
         "player": "Messi",
         "minute": "90+5"
+      }
+    ]
+  },
+  "44": {
+    "home": 1,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Jordan",
+        "player": "Al-Rashdan",
+        "minute": "36"
+      },
+      {
+        "team": "Algeria",
+        "player": "Benbouali",
+        "minute": "69"
+      },
+      {
+        "team": "Algeria",
+        "player": "Gouiri",
+        "minute": "82"
       }
     ]
   }
