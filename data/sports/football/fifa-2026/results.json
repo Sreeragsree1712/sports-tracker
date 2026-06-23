@@ -980,6 +980,11 @@
       }
     ]
   },
+  "45": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
+  },
   "47": {
     "home": 5,
     "away": 0,
