@@ -979,5 +979,38 @@
         "minute": "82"
       }
     ]
+  },
+  "47": {
+    "home": 5,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Portugal",
+        "player": "Ronaldo",
+        "minute": "6"
+      },
+      {
+        "team": "Portugal",
+        "player": "Ronaldo",
+        "minute": "39"
+      },
+      {
+        "team": "Portugal",
+        "player": "Mendes",
+        "minute": "17"
+      },
+      {
+        "team": "Uzbekistan",
+        "player": "Nematov",
+        "minute": "60",
+        "type": "og"
+      },
+      {
+        "team": "Portugal",
+        "player": "Leão",
+        "minute": "87"
+      }
+    ]
   }
 }
