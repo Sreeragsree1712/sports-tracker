@@ -1029,5 +1029,17 @@
         "minute": "87"
       }
     ]
+  },
+  "48": {
+    "home": 1,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Colombia",
+        "player": "Muñoz",
+        "minute": "76"
+      }
+    ]
   }
 }
