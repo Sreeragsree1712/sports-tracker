@@ -1041,5 +1041,55 @@
         "minute": "76"
       }
     ]
+  },
+  "51": {
+    "home": 2,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Switzerland",
+        "player": "Vargas",
+        "minute": "46"
+      },
+      {
+        "team": "Switzerland",
+        "player": "Manzambi",
+        "minute": "57"
+      },
+      {
+        "team": "Canada",
+        "player": "P. David",
+        "minute": "76"
+      }
+    ]
+  },
+  "52": {
+    "home": 3,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Bosnia and Herzegovina",
+        "player": "Alajbegović",
+        "minute": "29"
+      },
+      {
+        "team": "Qatar",
+        "player": "Abunada",
+        "minute": "34",
+        "type": "og"
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "player": "Mahmić",
+        "minute": "80"
+      },
+      {
+        "team": "Qatar",
+        "player": "Al-Haydos",
+        "minute": "42"
+      }
+    ]
   }
 }
