@@ -155,7 +155,7 @@
     "scorers": [
       {
         "team": "Cote d'Ivoire",
-        "player": "Amad",
+        "player": "Diallo",
         "minute": "90"
       }
     ]
@@ -1183,6 +1183,45 @@
         "team": "South Africa",
         "player": "Maseko",
         "minute": "63"
+      }
+    ]
+  },
+  "55": {
+    "home": 0,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Cote d'Ivoire",
+        "player": "Pépé",
+        "minute": "7"
+      },
+      {
+        "team": "Cote d'Ivoire",
+        "player": "Pépé",
+        "minute": "64"
+      }
+    ]
+  },
+  "56": {
+    "home": 2,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Ecuador",
+        "player": "Angulo",
+        "minute": "9"
+      },
+      {
+        "team": "Ecuador",
+        "player": "Plata",
+        "minute": "77"
+      },
+      {
+        "team": "Germany",
+        "player": "Sané",
+        "minute": "2"
       }
     ]
   }
