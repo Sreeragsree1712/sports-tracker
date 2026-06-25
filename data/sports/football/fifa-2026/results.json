@@ -1151,5 +1151,39 @@
         "minute": "42"
       }
     ]
+  },
+  "53": {
+    "home": 0,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Mexico",
+        "player": "M. Chávez",
+        "minute": "55"
+      },
+      {
+        "team": "Mexico",
+        "player": "Quiñones",
+        "minute": "61"
+      },
+      {
+        "team": "Mexico",
+        "player": "Fidalgo",
+        "minute": "90+4"
+      }
+    ]
+  },
+  "54": {
+    "home": 1,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "South Africa",
+        "player": "Maseko",
+        "minute": "63"
+      }
+    ]
   }
 }
