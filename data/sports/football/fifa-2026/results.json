@@ -1042,6 +1042,66 @@
       }
     ]
   },
+  "49": {
+    "home": 0,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Brazil",
+        "player": "Vinícius",
+        "minute": "7"
+      },
+      {
+        "team": "Brazil",
+        "player": "Vinícius",
+        "minute": "45+3"
+      },
+      {
+        "team": "Brazil",
+        "player": "Cunha",
+        "minute": "60"
+      }
+    ]
+  },
+  "50": {
+    "home": 4,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Morocco",
+        "player": "Hakimi",
+        "minute": "39"
+      },
+      {
+        "team": "Morocco",
+        "player": "Saibari",
+        "minute": "45+1"
+      },
+      {
+        "team": "Morocco",
+        "player": "Rahimi",
+        "minute": "78"
+      },
+      {
+        "team": "Morocco",
+        "player": "Yassine",
+        "minute": "89"
+      },
+      {
+        "team": "Haiti",
+        "player": "Bounou",
+        "minute": "10",
+        "type": "og"
+      },
+      {
+        "team": "Haiti",
+        "player": "Isidor",
+        "minute": "43"
+      }
+    ]
+  },
   "51": {
     "home": 2,
     "away": 1,
