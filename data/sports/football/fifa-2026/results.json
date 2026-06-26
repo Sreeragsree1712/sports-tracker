@@ -1224,5 +1224,50 @@
         "minute": "2"
       }
     ]
+  },
+  "57": {
+    "home": 1,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Japan",
+        "player": "Maeda",
+        "minute": "56"
+      },
+      {
+        "team": "Sweden",
+        "player": "Elanga",
+        "minute": "62"
+      }
+    ]
+  },
+  "58": {
+    "home": 1,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Tunisia",
+        "player": "Mastouri",
+        "minute": "54"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Skhiri",
+        "minute": "3",
+        "type": "og"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Brobbey",
+        "minute": "7"
+      },
+      {
+        "team": "Netherlands",
+        "player": "Van Hecke",
+        "minute": "62"
+      }
+    ]
   }
 }
