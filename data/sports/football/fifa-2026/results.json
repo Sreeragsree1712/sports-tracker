@@ -1306,5 +1306,42 @@
     "home": 0,
     "away": 0,
     "status": "finished"
+  },
+  "61": {
+    "home": 1,
+    "away": 4,
+    "status": "finished"
+  },
+  "62": {
+    "home": 5,
+    "away": 0,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Senegal",
+        "player": "Diarra",
+        "minute": "4"
+      },
+      {
+        "team": "Senegal",
+        "player": "I. Sarr",
+        "minute": "56"
+      },
+      {
+        "team": "Senegal",
+        "player": "P. Gueye",
+        "minute": "59"
+      },
+      {
+        "team": "Senegal",
+        "player": "P. Gueye",
+        "minute": "71"
+      },
+      {
+        "team": "Senegal",
+        "player": "I. Ndiaye",
+        "minute": "82"
+      }
+    ]
   }
 }
