@@ -1269,5 +1269,42 @@
         "minute": "62"
       }
     ]
+  },
+  "59": {
+    "home": 3,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Turkiye",
+        "player": "Güler",
+        "minute": "10"
+      },
+      {
+        "team": "Turkiye",
+        "player": "Yılmaz",
+        "minute": "31"
+      },
+      {
+        "team": "Turkiye",
+        "player": "Ayhan",
+        "minute": "90+8"
+      },
+      {
+        "team": "United States",
+        "player": "Trusty",
+        "minute": "3"
+      },
+      {
+        "team": "United States",
+        "player": "Berhalter",
+        "minute": "49"
+      }
+    ]
+  },
+  "60": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
   }
 }
