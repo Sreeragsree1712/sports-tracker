@@ -1343,5 +1343,22 @@
         "minute": "82"
       }
     ]
+  },
+  "65": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
+  },
+  "66": {
+    "home": 0,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Spain",
+        "player": "Baena",
+        "minute": "42"
+      }
+    ]
   }
 }
