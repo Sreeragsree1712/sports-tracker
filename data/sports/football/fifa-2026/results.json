@@ -1453,5 +1453,103 @@
         "minute": "73"
       }
     ]
+  },
+  "69": {
+    "home": 3,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Algeria",
+        "player": "Belghali",
+        "minute": "45"
+      },
+      {
+        "team": "Algeria",
+        "player": "Mahrez",
+        "minute": "60"
+      },
+      {
+        "team": "Algeria",
+        "player": "Mahrez",
+        "minute": "90+3"
+      },
+      {
+        "team": "Austria",
+        "player": "Arnautović",
+        "minute": "28"
+      },
+      {
+        "team": "Austria",
+        "player": "Sabitzer",
+        "minute": "55"
+      },
+      {
+        "team": "Austria",
+        "player": "Kalajdžić",
+        "minute": "90+6"
+      }
+    ]
+  },
+  "70": {
+    "home": 1,
+    "away": 3,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Jordan",
+        "player": "Al-Taamari",
+        "minute": "55"
+      },
+      {
+        "team": "Argentina",
+        "player": "Lo Celso",
+        "minute": "19"
+      },
+      {
+        "team": "Argentina",
+        "player": "La. Martínez",
+        "minute": "31",
+        "type": "pen"
+      },
+      {
+        "team": "Argentina",
+        "player": "Messi",
+        "minute": "80"
+      }
+    ]
+  },
+  "71": {
+    "home": 0,
+    "away": 0,
+    "status": "finished"
+  },
+  "72": {
+    "home": 3,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Congo DR",
+        "player": "Wissa",
+        "minute": "68",
+        "type": "pen"
+      },
+      {
+        "team": "Congo DR",
+        "player": "Wissa",
+        "minute": "90+1"
+      },
+      {
+        "team": "Congo DR",
+        "player": "Mayele",
+        "minute": "78"
+      },
+      {
+        "team": "Uzbekistan",
+        "player": "Shomurodov",
+        "minute": "10"
+      }
+    ]
   }
 }
