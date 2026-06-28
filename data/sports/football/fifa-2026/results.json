@@ -1414,5 +1414,44 @@
         "minute": "42"
       }
     ]
+  },
+  "67": {
+    "home": 0,
+    "away": 2,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "England",
+        "player": "Bellingham",
+        "minute": "62"
+      },
+      {
+        "team": "England",
+        "player": "Kane",
+        "minute": "67"
+      }
+    ]
+  },
+  "68": {
+    "home": 2,
+    "away": 1,
+    "status": "finished",
+    "scorers": [
+      {
+        "team": "Croatia",
+        "player": "P. Sučić",
+        "minute": "31"
+      },
+      {
+        "team": "Croatia",
+        "player": "Vlašić",
+        "minute": "83"
+      },
+      {
+        "team": "Ghana",
+        "player": "Luckassen",
+        "minute": "73"
+      }
+    ]
   }
 }
